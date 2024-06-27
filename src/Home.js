@@ -1,3 +1,5 @@
+import { TwitterTweetEmbed } from "react-twitter-embed";
+
 const Home = () => {
   return (
     <div className="container">
@@ -7,9 +9,14 @@ const Home = () => {
       </div>
       <div className="content">
         <div className="card mt-lg">
-          <h2 style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}>
+          {/* <h2 style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}>
             Day 1
           </h2>
+          <p style={{ fontSize: "var(--font-size-medium)" }}>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident,
+            laboriosam.
+          </p> */}
+          <TwitterTweetEmbed tweetId={"1805659724018598152"} />
         </div>
       </div>
     </div>
