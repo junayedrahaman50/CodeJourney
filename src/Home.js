@@ -18,6 +18,36 @@ const Home = () => {
           </p> */}
           <TwitterTweetEmbed tweetId={"1805659724018598152"} />
         </div>
+        <div className="card mt-lg">
+          <TwitterTweetEmbed tweetId={"1805659724018598152"} />
+        </div>
+        <div className="card mt-lg">
+          <TwitterTweetEmbed tweetId={"1805659724018598152"} />
+        </div>
+        <div className="card mt-lg">
+          <TwitterTweetEmbed tweetId={"1805659724018598152"} />
+        </div>
+        <div className="card mt-lg">
+          <TwitterTweetEmbed tweetId={"1805659724018598152"} />
+        </div>
+        <div className="card mt-lg">
+          <TwitterTweetEmbed tweetId={"1805659724018598152"} />
+        </div>
+        <div className="card mt-lg">
+          <TwitterTweetEmbed tweetId={"1805659724018598152"} />
+        </div>
+        <div className="card mt-lg">
+          <TwitterTweetEmbed tweetId={"1805659724018598152"} />
+        </div>
+        <div className="card mt-lg">
+          <TwitterTweetEmbed tweetId={"1805659724018598152"} />
+        </div>
+        <div className="card mt-lg">
+          <TwitterTweetEmbed tweetId={"1805659724018598152"} />
+        </div>
+        <div className="card mt-lg">
+          <TwitterTweetEmbed tweetId={"1805659724018598152"} />
+        </div>
       </div>
     </div>
   );
