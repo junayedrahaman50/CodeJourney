@@ -1,11 +1,15 @@
 // import { TwitterTweetEmbed } from "react-twitter-embed";
 import { Twitter } from "lucide-react";
 const Home = () => {
+  const handleClick = () => {
+    window.open("https://x.com/junayed_rahaman", "_blank");
+  };
+
   return (
     <div className="container">
-      <div className="header">
+      <div className="header mt-lg">
         <h1 className="heading-primary">Junayed's 100 Days of Code Journey</h1>
-        <button className="btn-primary mt-md">
+        <button className="btn-primary mt-md" onClick={handleClick}>
           Follow my journey on
           <Twitter />
         </button>
