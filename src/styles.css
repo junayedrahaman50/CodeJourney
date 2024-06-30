@@ -59,7 +59,8 @@ MEDIUM: 11PX
 
 html {
   /* font-size: 62.5%; */
-  font-size: 75%;
+  font-size: 68.75%;
+  /* font-size: 75%; */
   font-family: "Poppins", sans-serif;
 }
 
@@ -195,6 +196,7 @@ body {
   border: 1px solid #e1e1e1;
   cursor: pointer;
   transition: all 0.3s ease;
+  overflow-wrap: break-word;
 }
 
 .card h2 {

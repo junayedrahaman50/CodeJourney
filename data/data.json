@@ -1,16 +1,139 @@
 {
   "posts": [
     {
-      "Day": "Day 58 & 59 of #100Daysofcode",
+      "id": 1,
+      "Day": "Day 58 & 59",
       "Content": "Week 2 of @_nightsweekends s5\n\nBuilding Authentication of Workout Buddy Web App.\n\nLast 2 days I worked on:\n1. Setting the Initial Auth Status to keep the user logged in.\n2. Building a toy version of my idea."
     },
     {
-      "Day": "Day 57 of #100Daysofcode",
+      "id": 2,
+      "Day": "Day 57",
       "Content": "Week 2 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on a custom useLogin hook to log users in to the app."
     },
     {
-      "Day": "Day 56 of #100Daysofcode",
+      "id": 3,
+      "Day": "Day 56",
       "Content": "Week 2 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on useLogout hook to log users out of the app."
+    },
+    {
+      "id": 4,
+      "Day": "Day 55",
+      "Content": "Week 1 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I submitted s5 week #1 update and worked on reusable useSignup hook to signup new users to the app."
+    },
+    {
+      "id": 5,
+      "Day": "Day 54",
+      "Content": "Week 1 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on Signup and Login forms."
+    },
+    {
+      "id": 6,
+      "Day": "Day 53",
+      "Content": "Week 1 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I created global user state using React Context that is available to entire app."
+    },
+    {
+      "id": 7,
+      "Day": "Day 52",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on static login method in backend API."
+    },
+    {
+      "id": 8,
+      "Day": "Day 51",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I learned about signing tokens and sending them back to the client."
+    },
+    {
+      "id": 9,
+      "Day": "Day 50",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I learned about JSON Web Tokens (JWT)."
+    },
+    {
+      "id": 10,
+      "Day": "Day 49",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on Email and Password validation in backend API."
+    },
+    {
+      "id": 11,
+      "Day": "Day 48",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on:\n1. Static signup method.\n2. Password hashing.\n3. Testing signup route using postman."
+    },
+    {
+      "id": 12,
+      "Day": "Day 47",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on the controller, model, and routes for user authentication."
+    },
+    {
+      "id": 13,
+      "Day": "Day 46",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Workout Buddy Web App.\n\nToday I learned to format the date of workout creation using date-fns package and added material icons."
+    },
+    {
+      "id": 14,
+      "Day": "Day 45",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Workout Buddy Web App.\n\nToday I learned to handle error responses in WorkoutForm component."
+    },
+    {
+      "id": 15,
+      "Day": "Day 44",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Workout Buddy Web App.\n\nToday I learned about:\n1. Deleting single workout document by making fetch request to Backend API.\n2. Updating the global context state so that UI updates with new state."
+    },
+    {
+      "id": 16,
+      "Day": "Day 43",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist.\n\nToday I learned about:\n1. Creating a React Context to provide global workouts state to entire React application.\n2. Creating custom useWorkoutsContext hook to access and update the global context state."
+    },
+    {
+      "id": 17,
+      "Day": "Day 42",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Workout Buddy Web App.\n\nToday I worked on WorkoutForm component to add new workouts to the Database."
+    },
+    {
+      "id": 18,
+      "Day": "Day 41",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist.\n\nToday I worked on:\n1. Home component to fetch workouts data from Backend API and used proxy field in package.json file to avoid CORS issue.\n2. WorkoutDetails component to show details of each workout."
+    },
+    {
+      "id": 19,
+      "Day": "Day 40",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist. Started frontend React part.\n\nToday I worked on:\n1. Routing System for Workout Buddy MERN app.\n2. Home component.\n3. Reusable Navbar component."
+    },
+    {
+      "id": 20,
+      "Day": "Day 39",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned to create controller functions to delete and update single document."
+    },
+    {
+      "id": 21,
+      "Day": "Day 38",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned to create controller functions for API routes."
+    },
+    {
+      "id": 22,
+      "Day": "Day 37",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned about:\n1. Creating models and schemas for database collection using mongoose.\n2. Creating a new document using mongoose and testing it using postman."
+    },
+    {
+      "id": 23,
+      "Day": "Day 36",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned about:\n1. Setting up MongoDB Atlas.\n2. Using mongoose to connect with MongoDB database."
+    },
+    {
+      "id": 24,
+      "Day": "Day 35",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned about:\n1. Express Router.\n2. API Routes."
+    },
+    {
+      "id": 25,
+      "Day": "Day 34",
+      "Content": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned about:\n1. Setting up express app.\n2. Express Middleware.\n3. Using environment variables to store sensitive information.\n4. Using postman to simulate requests and test routes."
+    },
+    {
+      "id": 26,
+      "Day": "Day 31 & 32",
+      "Content": "Finished working on Expenses chart component challenge by @frontendmentor\n\n1. Expenses can be viewed by hovering over each bar.\n2. Current day's bar is highlighted in different color.\n3. The size of bars are dynamically calculated from JSON file."
+    },
+    {
+      "id": 27,
+      "Day": "Day 30",
+      "Content": "Finished working on the last project from #JavaScript30 challenge by @wesbos\n\nToday I learned to make a Whack-A-Mole game where players can score by clicking on the disappearing moles within 10 seconds.\n\nLink: https://junayedrahaman50.github.io/JavaScript30/30-Whack-A-Mole/"
     }
   ]
 }

@@ -1,22 +1,31 @@
-// import { TwitterTweetEmbed } from "react-twitter-embed";
+import React from "react";
 import { Twitter } from "lucide-react";
 import { useState, useEffect } from "react";
+import useFetch from "./useFetch";
+
 const Home = () => {
+  const {
+    data: posts,
+    isPending,
+    error,
+  } = useFetch("http://localhost:8000/posts");
   const [showModal, setShowModal] = useState(false);
+  const [selectedPost, setSelectedPost] = useState(null);
 
   const handleClick = () => {
-    // window.open("https://x.com/junayed_rahaman");
-    window.location.href = "https://x.com/junayed_rahaman";
+    window.open("https://x.com/junayed_rahaman", "_blank");
   };
 
-  const handleModal = () => {
+  const handleModal = (post) => {
+    setSelectedPost(post);
     setShowModal(true);
   };
 
   const closeModal = () => {
     setShowModal(false);
+    setSelectedPost(null);
   };
-  // close modal by pressing esc
+
   useEffect(() => {
     const handleEscape = (event) => {
       if (event.key === "Escape") {
@@ -31,12 +40,29 @@ const Home = () => {
     };
   }, []);
 
+  // Function to render content with line breaks
+  const renderContent = (content) => {
+    return content.split("\n").map((text, index) => (
+      <React.Fragment key={index}>
+        {text}
+        <br />
+      </React.Fragment>
+    ));
+  };
+
   return (
     <>
       {showModal && (
         <>
           <div onClick={closeModal} className="overlay"></div>
-          <div className="modal"></div>
+          <div className="modal">
+            {selectedPost && (
+              <>
+                <h2>{selectedPost.Day}</h2>
+                <p>{renderContent(selectedPost.Content)}</p>
+              </>
+            )}
+          </div>
         </>
       )}
       <div className="container">
@@ -50,79 +76,25 @@ const Home = () => {
           </button>
         </div>
         <div className="content">
-          <div onClick={handleModal} className="card mt-lg">
-            <h2 style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}>
-              Day 1
-            </h2>
-            <p style={{ fontSize: "var(--font-size-medium)" }}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Provident, laboriosam.
-            </p>
-            {/* <TwitterTweetEmbed tweetId={"1805659724018598152"} /> */}
-          </div>
-          <div className="card mt-lg">
-            <h2 style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}>
-              Day 2
-            </h2>
-            <p style={{ fontSize: "var(--font-size-medium)" }}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Provident, laboriosam.
-            </p>
-          </div>
-          <div className="card mt-md">
-            <h2 style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}>
-              Day 3
-            </h2>
-            <p style={{ fontSize: "var(--font-size-medium)" }}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Provident, laboriosam.
-            </p>
-          </div>
-          <div className="card mt-md">
-            <h2 style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}>
-              Day 4
-            </h2>
-            <p style={{ fontSize: "var(--font-size-medium)" }}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Provident, laboriosam.
-            </p>
-          </div>
-          <div className="card mt-md">
-            <h2 style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}>
-              Day 5
-            </h2>
-            <p style={{ fontSize: "var(--font-size-medium)" }}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Provident, laboriosam.
-            </p>
-          </div>
-          <div className="card mt-md">
-            <h2 style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}>
-              Day 6
-            </h2>
-            <p style={{ fontSize: "var(--font-size-medium)" }}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Provident, laboriosam.
-            </p>
-          </div>
-          <div className="card mt-md">
-            <h2 style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}>
-              Day 7
-            </h2>
-            <p style={{ fontSize: "var(--font-size-medium)" }}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Provident, laboriosam.
-            </p>
-          </div>
-          <div className="card mt-md">
-            <h2 style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}>
-              Day 8
-            </h2>
-            <p style={{ fontSize: "var(--font-size-medium)" }}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Provident, laboriosam.
-            </p>
-          </div>
+          {error && <div className="error">{error}</div>}
+          {isPending && <div className="loading">Loading...</div>}
+          {posts &&
+            posts.map((post) => (
+              <div
+                onClick={() => handleModal(post)}
+                className="card mt-lg"
+                key={post.id}
+              >
+                <h2
+                  style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}
+                >
+                  {post.Day}
+                </h2>
+                <p style={{ fontSize: "var(--font-size-medium)" }}>
+                  {renderContent(post.Content)}
+                </p>
+              </div>
+            ))}
         </div>
       </div>
     </>
