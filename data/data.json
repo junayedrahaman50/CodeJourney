@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "Day": "Day 58 & 59 of #100Daysofcode",
+      "Content": "Week 2 of @_nightsweekends s5\n\nBuilding Authentication of Workout Buddy Web App.\n\nLast 2 days I worked on:\n1. Setting the Initial Auth Status to keep the user logged in.\n2. Building a toy version of my idea."
+    },
+    {
+      "Day": "Day 57 of #100Daysofcode",
+      "Content": "Week 2 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on a custom useLogin hook to log users in to the app."
+    },
+    {
+      "Day": "Day 56 of #100Daysofcode",
+      "Content": "Week 2 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on useLogout hook to log users out of the app."
+    }
+  ]
+}

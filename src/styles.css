@@ -59,18 +59,19 @@ MEDIUM: 11PX
 
 html {
   /* font-size: 62.5%; */
-  font-size: 68.75%;
+  font-size: 75%;
   font-family: "Poppins", sans-serif;
 }
 
 body {
   background-color: #f1f1f1;
+  /* position: relative; */
 }
-body::after {
+/* body::after {
   height: 100vh;
   position: relative;
   content: "";
-}
+} */
 :root {
   /* --primary-color: #f1356d; */
   --primary-color: #f45d8a;
@@ -212,20 +213,24 @@ body::after {
 
 /* modal */
 .modal {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
-  background-color: #fff;
+  width: 40%;
+  /* background-color: #fff;
+   */
+  background-color: #fefefe;
   padding: 6rem;
-  border-radius: 5px;
+  border-radius: 1rem;
+  border: 1px solid #e1e1e1;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
+  height: 100vh;
   top: 0;
   left: 0;
   width: 100%;

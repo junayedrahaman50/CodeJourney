@@ -1,22 +1,35 @@
 // import { TwitterTweetEmbed } from "react-twitter-embed";
 import { Twitter } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = () => {
-    window.open("https://x.com/junayed_rahaman", "_blank");
+    // window.open("https://x.com/junayed_rahaman");
+    window.location.href = "https://x.com/junayed_rahaman";
   };
 
   const handleModal = () => {
     setShowModal(true);
-    document.documentElement.style.overflowY = "hidden";
   };
 
   const closeModal = () => {
     setShowModal(false);
-    document.documentElement.style.overflowY = "";
   };
+  // close modal by pressing esc
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
 
   return (
     <>
