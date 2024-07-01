@@ -186,6 +186,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 2%;
+  margin-bottom: 4.8rem;
 }
 .card {
   width: 49%;
@@ -227,6 +228,7 @@ body {
   border: 1px solid #e1e1e1;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
+  overflow-wrap: break-word;
 }
 
 .close-modal {
@@ -274,4 +276,9 @@ body {
 .loading {
   font-size: var(--font-size-large);
   margin: 4.8rem auto 0;
+}
+
+/* Animate css styles */
+.animate__animated.animate__fadeIn {
+  --animate-duration: 0.2s;
 }

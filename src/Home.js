@@ -54,8 +54,11 @@ const Home = () => {
     <>
       {showModal && (
         <>
-          <div onClick={closeModal} className="overlay"></div>
-          <div className="modal">
+          <div
+            onClick={closeModal}
+            className="overlay animate__animated animate__fadeIn"
+          ></div>
+          <div className="modal animate__animated animate__fadeIn">
             {selectedPost && (
               <>
                 <button onClick={closeModal} className="close-modal">
