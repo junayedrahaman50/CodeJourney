@@ -8,7 +8,7 @@ const Home = () => {
     data: posts,
     isPending,
     error,
-  } = useFetch("http://localhost:8000/posts");
+  } = useFetch("http://localhost:9000/posts");
   const [showModal, setShowModal] = useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
 
@@ -58,8 +58,13 @@ const Home = () => {
           <div className="modal">
             {selectedPost && (
               <>
-                <h2>{selectedPost.Day}</h2>
-                <p>{renderContent(selectedPost.Content)}</p>
+                <button onClick={closeModal} className="close-modal">
+                  &times;
+                </button>
+                <h2 className="title">{selectedPost.Day}</h2>
+                <p className="description">
+                  {renderContent(selectedPost.Content)}
+                </p>
               </>
             )}
           </div>
@@ -91,7 +96,9 @@ const Home = () => {
                   {post.Day}
                 </h2>
                 <p style={{ fontSize: "var(--font-size-medium)" }}>
-                  {renderContent(post.Content)}
+                  {post.Content.length > 100
+                    ? post.Content.substring(0, 100) + "..."
+                    : renderContent(post.Content)}
                 </p>
               </div>
             ))}

@@ -77,6 +77,7 @@ body {
   /* --primary-color: #f1356d; */
   --primary-color: #f45d8a;
   --secondary-color: #2ecc71;
+  --error-color: #e7195a;
   --font-size-small: 1.4rem;
   --font-size-medium: 1.6rem;
   --font-size-large: 2rem;
@@ -220,14 +221,37 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 40%;
-  /* background-color: #fff;
-   */
   background-color: #fefefe;
-  padding: 6rem;
+  padding: 4.8rem;
   border-radius: 1rem;
   border: 1px solid #e1e1e1;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: var(--primary-color);
+}
+
+.title {
+  font-size: 2.4rem;
+  margin: 2rem 0;
+}
+
+.description {
+  font-size: var(--font-size-medium);
 }
 
 .overlay {
@@ -240,4 +264,14 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 5;
+}
+
+.error {
+  color: var(--error-color);
+}
+
+.error,
+.loading {
+  font-size: var(--font-size-large);
+  margin: 4.8rem auto 0;
 }
