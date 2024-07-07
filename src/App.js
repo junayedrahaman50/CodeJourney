@@ -6,7 +6,9 @@ export default function App() {
   return (
     <div className="App">
       <Navbar />
-      <Home />
+      <main className="main">
+        <Home />
+      </main>
     </div>
   );
 }

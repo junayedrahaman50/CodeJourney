@@ -77,7 +77,10 @@ body {
   /* --primary-color: #f1356d; */
   /* --primary-color: #f45d8a; */
   --primary-color: #cbc3e3;
+  /* --primary-color: hsl(220.9 39.3% 11%); */
   --primary-accent-color: #faf9fc;
+  --primary-tint-color: #b7b0cc;
+  /* --primary-tint-color: hsl(220.9 39.3% 11%); */
   --secondary-color: #2ecc71;
   --error-color: #e7195a;
   --font-size-small: 1.4rem;
@@ -102,7 +105,10 @@ body {
 .mt-lg {
   margin-top: 4.8rem;
 }
-
+.main {
+  width: 1519px;
+  margin: 0 auto;
+}
 .container {
   width: 60%;
   margin: 0 auto;
@@ -121,10 +127,11 @@ body {
   padding: 0 8px 0;
 }
 
-.nav .container .title {
+.nav .container .logo {
   font-size: 2.8rem;
   font-weight: var(--BOLD);
   letter-spacing: 0.5px;
+  margin: 2.4rem 0 auto; /* add this one when img logo used */
 }
 .nav .container .title span {
   color: var(--primary-color);
@@ -180,6 +187,14 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
+}
+
+.btn-primary-edit,
+.btn-primary-share {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  background-color: var(--primary-tint-color);
+  gap: 0.8rem;
 }
 
 .btn-primary:hover {
@@ -253,12 +268,17 @@ body {
 
 .title {
   font-size: 2.4rem;
-  /* margin: 2rem 0; */
-  margin: 2.4rem 0 auto;
+  margin: 2rem 0 1rem;
 }
 
 .description {
   font-size: var(--font-size-medium);
+  margin-bottom: 2rem;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 2rem;
 }
 
 .overlay {

@@ -3,7 +3,7 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <div className="container">
-        <div className="title">
+        <div className="logo">
           {/* <span>100</span>Daysofcode */}
           <img style={{ width: "20rem" }} src={logo} alt="logo" />
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Twitter } from "lucide-react";
+import { Twitter, NotebookPen, Notebook, Share2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import useFetch from "./useFetch";
 
@@ -68,6 +68,17 @@ const Home = () => {
                 <p className="description">
                   {renderContent(selectedPost.Content)}
                 </p>
+                <div className="modal-buttons">
+                  <button className="btn-primary btn-primary-edit">
+                    <NotebookPen /> Edit
+                  </button>
+                  <button className="btn-primary btn-primary-edit">
+                    <Notebook /> Notes
+                  </button>
+                  <button className="btn-primary btn-primary-edit">
+                    <Share2 /> Share
+                  </button>
+                </div>
               </>
             )}
           </div>
