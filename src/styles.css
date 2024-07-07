@@ -75,7 +75,9 @@ body {
 } */
 :root {
   /* --primary-color: #f1356d; */
-  --primary-color: #f45d8a;
+  /* --primary-color: #f45d8a; */
+  --primary-color: #cbc3e3;
+  --primary-accent-color: #faf9fc;
   --secondary-color: #2ecc71;
   --error-color: #e7195a;
   --font-size-small: 1.4rem;
@@ -142,7 +144,8 @@ body {
   user-select: none;
 }
 .nav .container ul li:hover {
-  background-color: #feebf0;
+  /* background-color: #feebf0; */
+  background-color: #f5f3f9;
 }
 .header {
   text-align: center;
@@ -180,7 +183,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #f45d8a;
+  /* background-color: #f45d8a; */
 }
 .content {
   display: flex;
@@ -211,7 +214,8 @@ body {
 }
 
 .card:hover {
-  background-color: #feebf0;
+  /* background-color: #feebf0; */
+  background-color: var(--primary-accent-color);
   /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); */
 }
 
@@ -249,7 +253,8 @@ body {
 
 .title {
   font-size: 2.4rem;
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
+  margin: 2.4rem 0 auto;
 }
 
 .description {

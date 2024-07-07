@@ -1,9 +1,11 @@
+import logo from "./images/logo4.png";
 const Navbar = () => {
   return (
     <nav className="nav">
       <div className="container">
         <div className="title">
-          <span>100</span>Daysofcode
+          {/* <span>100</span>Daysofcode */}
+          <img style={{ width: "20rem" }} src={logo} alt="logo" />
         </div>
         <ul>
           <li>Progress</li>
