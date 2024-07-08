@@ -1,7 +1,8 @@
 import React from "react";
-import { Twitter, NotebookPen, Notebook, Share2 } from "lucide-react";
+import { Twitter, Plus, NotebookPen, Notebook, Share2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import useFetch from "./useFetch";
+import CreatePost from "./CreatePost";
 
 const Home = () => {
   const {
@@ -11,9 +12,11 @@ const Home = () => {
   } = useFetch("http://localhost:9000/posts");
   const [showModal, setShowModal] = useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
+  const [visible, setVisible] = useState(false);
 
   const handleClick = () => {
-    window.open("https://x.com/junayed_rahaman", "_blank");
+    // window.open("https://x.com/junayed_rahaman", "_blank");
+    setVisible(true);
   };
 
   const handleModal = (post) => {
@@ -89,9 +92,13 @@ const Home = () => {
           <h1 className="heading-primary">
             Junayed's 100 Days of Code Journey
           </h1>
-          <button className="btn-primary mt-md" onClick={handleClick}>
+          {/* <button className="btn-primary mt-md" onClick={handleClick}>
             Follow my journey on
             <Twitter />
+          </button> */}
+          <button className="btn-primary mt-md" onClick={handleClick}>
+            <Plus />
+            New Post
           </button>
         </div>
         <div className="content">
@@ -118,6 +125,7 @@ const Home = () => {
             ))}
         </div>
       </div>
+      <CreatePost visible={visible} setVisible={setVisible} />
     </>
   );
 };
