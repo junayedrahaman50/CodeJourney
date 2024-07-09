@@ -3,6 +3,7 @@ import { Plus, NotebookPen, Notebook, Share2, Trash2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import useFetch from "./useFetch";
 import CreatePost from "./CreatePost";
+import EditPost from "./EditPost";
 
 const Home = () => {
   const {
@@ -13,6 +14,7 @@ const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
   const [visible, setVisible] = useState(false);
+  const [showEdit, setShowEdit] = useState(false);
 
   const handleClick = () => {
     // window.open("https://x.com/junayed_rahaman", "_blank");
@@ -61,33 +63,40 @@ const Home = () => {
             onClick={closeModal}
             className="overlay animate__animated animate__fadeIn"
           ></div>
-          <div className="modal animate__animated animate__fadeIn">
-            {selectedPost && (
-              <>
-                <button onClick={closeModal} className="close-modal">
-                  &times;
-                </button>
-                <h2 className="title">{selectedPost.title}</h2>
-                <p className="description">
-                  {renderContent(selectedPost.description)}
-                </p>
-                <div className="modal-buttons">
-                  <button className="btn-primary btn-primary--md">
-                    <NotebookPen /> Edit
+          {!showEdit ? (
+            <div className="modal animate__animated animate__fadeIn">
+              {selectedPost && (
+                <>
+                  <button onClick={closeModal} className="close-modal">
+                    &times;
                   </button>
-                  <button className="btn-primary btn-primary--md">
-                    <Trash2 /> Delete
-                  </button>
-                  <button className="btn-primary btn-primary--md">
-                    <Notebook /> Notes
-                  </button>
-                  <button className="btn-primary btn-primary--md">
-                    <Share2 /> Share
-                  </button>
-                </div>
-              </>
-            )}
-          </div>
+                  <h2 className="title">{selectedPost.title}</h2>
+                  <p className="description">
+                    {renderContent(selectedPost.description)}
+                  </p>
+                  <div className="modal-buttons">
+                    <button
+                      onClick={() => setShowEdit(true)}
+                      className="btn-primary btn-primary--md"
+                    >
+                      <NotebookPen /> Edit
+                    </button>
+                    <button className="btn-primary btn-primary--md">
+                      <Trash2 /> Delete
+                    </button>
+                    <button className="btn-primary btn-primary--md">
+                      <Notebook /> Notes
+                    </button>
+                    <button className="btn-primary btn-primary--md">
+                      <Share2 /> Share
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+          ) : (
+            <EditPost selectedPost={selectedPost} setShowEdit={setShowEdit} />
+          )}
         </>
       )}
       <div className="container">
