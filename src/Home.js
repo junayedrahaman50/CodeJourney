@@ -1,5 +1,5 @@
 import React from "react";
-import { Twitter, Plus, NotebookPen, Notebook, Share2 } from "lucide-react";
+import { Plus, NotebookPen, Notebook, Share2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import useFetch from "./useFetch";
 import CreatePost from "./CreatePost";
