@@ -44,8 +44,8 @@ const Home = () => {
   }, []);
 
   // Function to render content with line breaks
-  const renderContent = (content) => {
-    return content.split("\n").map((text, index) => (
+  const renderContent = (description) => {
+    return description.split("\n").map((text, index) => (
       <React.Fragment key={index}>
         {text}
         <br />
@@ -67,9 +67,9 @@ const Home = () => {
                 <button onClick={closeModal} className="close-modal">
                   &times;
                 </button>
-                <h2 className="title">{selectedPost.Day}</h2>
+                <h2 className="title">{selectedPost.title}</h2>
                 <p className="description">
-                  {renderContent(selectedPost.Content)}
+                  {renderContent(selectedPost.description)}
                 </p>
                 <div className="modal-buttons">
                   <button className="btn-primary btn-primary-edit">
@@ -114,12 +114,12 @@ const Home = () => {
                 <h2
                   style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}
                 >
-                  {post.Day}
+                  {post.title}
                 </h2>
                 <p style={{ fontSize: "var(--font-size-medium)" }}>
-                  {post.Content.length > 100
-                    ? post.Content.substring(0, 100) + "..."
-                    : renderContent(post.Content)}
+                  {post.description.length > 100
+                    ? post.description.substring(0, 100) + "..."
+                    : renderContent(post.description)}
                 </p>
               </div>
             ))}

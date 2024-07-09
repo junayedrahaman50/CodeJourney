@@ -1,284 +1,289 @@
 {
   "posts": [
     {
-      "id": 1,
-      "Day": "Day 58 & 59",
-      "Content": "Week 2 of @_nightsweekends s5\n\nBuilding Authentication of Workout Buddy Web App.\n\nLast 2 days I worked on:\n1. Setting the Initial Auth Status to keep the user logged in.\n2. Building a toy version of my idea."
+      "id": "1",
+      "title": "Day 58 & 59",
+      "description": "Week 2 of @_nightsweekends s5\n\nBuilding Authentication of Workout Buddy Web App.\n\nLast 2 days I worked on:\n1. Setting the Initial Auth Status to keep the user logged in.\n2. Building a toy version of my idea."
     },
     {
-      "id": 2,
-      "Day": "Day 57",
-      "Content": "Week 2 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on a custom useLogin hook to log users in to the app."
+      "id": "2",
+      "title": "Day 57",
+      "description": "Week 2 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on a custom useLogin hook to log users in to the app."
     },
     {
-      "id": 3,
-      "Day": "Day 56",
-      "Content": "Week 2 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on useLogout hook to log users out of the app."
+      "id": "3",
+      "title": "Day 56",
+      "description": "Week 2 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on useLogout hook to log users out of the app."
     },
     {
-      "id": 4,
-      "Day": "Day 55",
-      "Content": "Week 1 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I submitted s5 week #1 update and worked on reusable useSignup hook to signup new users to the app."
+      "id": "4",
+      "title": "Day 55",
+      "description": "Week 1 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I submitted s5 week #1 update and worked on reusable useSignup hook to signup new users to the app."
     },
     {
-      "id": 5,
-      "Day": "Day 54",
-      "Content": "Week 1 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on Signup and Login forms."
+      "id": "5",
+      "title": "Day 54",
+      "description": "Week 1 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on Signup and Login forms."
     },
     {
-      "id": 6,
-      "Day": "Day 53",
-      "Content": "Week 1 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I created global user state using React Context that is available to entire app."
+      "id": "6",
+      "title": "Day 53",
+      "description": "Week 1 of @_nightsweekends s5\n\nLearning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I created global user state using React Context that is available to entire app."
     },
     {
-      "id": 7,
-      "Day": "Day 52",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on static login method in backend API."
+      "id": "7",
+      "title": "Day 52",
+      "description": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on static login method in backend API."
     },
     {
-      "id": 8,
-      "Day": "Day 51",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I learned about signing tokens and sending them back to the client."
+      "id": "8",
+      "title": "Day 51",
+      "description": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I learned about signing tokens and sending them back to the client."
     },
     {
-      "id": 9,
-      "Day": "Day 50",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I learned about JSON Web Tokens (JWT)."
+      "id": "9",
+      "title": "Day 50",
+      "description": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I learned about JSON Web Tokens (JWT)."
     },
     {
-      "id": 10,
-      "Day": "Day 49",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on Email and Password validation in backend API."
+      "id": "10",
+      "title": "Day 49",
+      "description": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on Email and Password validation in backend API."
     },
     {
-      "id": 11,
-      "Day": "Day 48",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on:\n1. Static signup method.\n2. Password hashing.\n3. Testing signup route using postman."
+      "id": "11",
+      "title": "Day 48",
+      "description": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on:\n1. Static signup method.\n2. Password hashing.\n3. Testing signup route using postman."
     },
     {
-      "id": 12,
-      "Day": "Day 47",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on the controller, model, and routes for user authentication."
+      "id": "12",
+      "title": "Day 47",
+      "description": "Learning MERN Stack from Net Ninja's Playlist. Building Authentication of Workout Buddy Web App.\n\nToday I worked on the controller, model, and routes for user authentication."
     },
     {
-      "id": 13,
-      "Day": "Day 46",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Workout Buddy Web App.\n\nToday I learned to format the date of workout creation using date-fns package and added material icons."
+      "id": "13",
+      "title": "Day 46",
+      "description": "Learning MERN Stack from Net Ninja's Playlist. Building Workout Buddy Web App.\n\nToday I learned to format the date of workout creation using date-fns package and added material icons."
     },
     {
-      "id": 14,
-      "Day": "Day 45",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Workout Buddy Web App.\n\nToday I learned to handle error responses in WorkoutForm component."
+      "id": "14",
+      "title": "Day 45",
+      "description": "Learning MERN Stack from Net Ninja's Playlist. Building Workout Buddy Web App.\n\nToday I learned to handle error responses in WorkoutForm component."
     },
     {
-      "id": 15,
-      "Day": "Day 44",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Workout Buddy Web App.\n\nToday I learned about:\n1. Deleting single workout document by making fetch request to Backend API.\n2. Updating the global context state so that UI updates with new state."
+      "id": "15",
+      "title": "Day 44",
+      "description": "Learning MERN Stack from Net Ninja's Playlist. Building Workout Buddy Web App.\n\nToday I learned about:\n1. Deleting single workout document by making fetch request to Backend API.\n2. Updating the global context state so that UI updates with new state."
     },
     {
-      "id": 16,
-      "Day": "Day 43",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist.\n\nToday I learned about:\n1. Creating a React Context to provide global workouts state to entire React application.\n2. Creating custom useWorkoutsContext hook to access and update the global context state."
+      "id": "16",
+      "title": "Day 43",
+      "description": "Learning MERN Stack from Net Ninja's Playlist.\n\nToday I learned about:\n1. Creating a React Context to provide global workouts state to entire React application.\n2. Creating custom useWorkoutsContext hook to access and update the global context state."
     },
     {
-      "id": 17,
-      "Day": "Day 42",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist. Building Workout Buddy Web App.\n\nToday I worked on WorkoutForm component to add new workouts to the Database."
+      "id": "17",
+      "title": "Day 42",
+      "description": "Learning MERN Stack from Net Ninja's Playlist. Building Workout Buddy Web App.\n\nToday I worked on WorkoutForm component to add new workouts to the Database."
     },
     {
-      "id": 18,
-      "Day": "Day 41",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist.\n\nToday I worked on:\n1. Home component to fetch workouts data from Backend API and used proxy field in package.json file to avoid CORS issue.\n2. WorkoutDetails component to show details of each workout."
+      "id": "18",
+      "title": "Day 41",
+      "description": "Learning MERN Stack from Net Ninja's Playlist.\n\nToday I worked on:\n1. Home component to fetch workouts data from Backend API and used proxy field in package.json file to avoid CORS issue.\n2. WorkoutDetails component to show details of each workout."
     },
     {
-      "id": 19,
-      "Day": "Day 40",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist. Started frontend React part.\n\nToday I worked on:\n1. Routing System for Workout Buddy MERN app.\n2. Home component.\n3. Reusable Navbar component."
+      "id": "19",
+      "title": "Day 40",
+      "description": "Learning MERN Stack from Net Ninja's Playlist. Started frontend React part.\n\nToday I worked on:\n1. Routing System for Workout Buddy MERN app.\n2. Home component.\n3. Reusable Navbar component."
     },
     {
-      "id": 20,
-      "Day": "Day 39",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned to create controller functions to delete and update single document."
+      "id": "20",
+      "title": "Day 39",
+      "description": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned to create controller functions to delete and update single document."
     },
     {
-      "id": 21,
-      "Day": "Day 38",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned to create controller functions for API routes."
+      "id": "21",
+      "title": "Day 38",
+      "description": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned to create controller functions for API routes."
     },
     {
-      "id": 22,
-      "Day": "Day 37",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned about:\n1. Creating models and schemas for database collection using mongoose.\n2. Creating a new document using mongoose and testing it using postman."
+      "id": "22",
+      "title": "Day 37",
+      "description": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned about:\n1. Creating models and schemas for database collection using mongoose.\n2. Creating a new document using mongoose and testing it using postman."
     },
     {
-      "id": 23,
-      "Day": "Day 36",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned about:\n1. Setting up MongoDB Atlas.\n2. Using mongoose to connect with MongoDB database."
+      "id": "23",
+      "title": "Day 36",
+      "description": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned about:\n1. Setting up MongoDB Atlas.\n2. Using mongoose to connect with MongoDB database."
     },
     {
-      "id": 24,
-      "Day": "Day 35",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned about:\n1. Express Router.\n2. API Routes."
+      "id": "24",
+      "title": "Day 35",
+      "description": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned about:\n1. Express Router.\n2. API Routes."
     },
     {
-      "id": 25,
-      "Day": "Day 34",
-      "Content": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned about:\n1. Setting up express app.\n2. Express Middleware.\n3. Using environment variables to store sensitive information.\n4. Using postman to simulate requests and test routes."
+      "id": "25",
+      "title": "Day 34",
+      "description": "Learning MERN Stack from Net Ninja's Playlist\n\nToday I learned about:\n1. Setting up express app.\n2. Express Middleware.\n3. Using environment variables to store sensitive information.\n4. Using postman to simulate requests and test routes."
     },
     {
-      "id": 26,
-      "Day": "Day 31 & 32",
-      "Content": "Finished working on Expenses chart component challenge by @frontendmentor\n\n1. Expenses can be viewed by hovering over each bar.\n2. Current day's bar is highlighted in different color.\n3. The size of bars are dynamically calculated from JSON file."
+      "id": "26",
+      "title": "Day 31 & 32",
+      "description": "Finished working on Expenses chart component challenge by @frontendmentor\n\n1. Expenses can be viewed by hovering over each bar.\n2. Current day's bar is highlighted in different color.\n3. The size of bars are dynamically calculated from JSON file."
     },
     {
-      "id": 27,
-      "Day": "Day 30",
-      "Content": "Finished working on the last project from #JavaScript30 challenge by @wesbos\n\nToday I learned to make a Whack-A-Mole game where players can score by clicking on the disappearing moles within 10 seconds.\n\nLink: https://junayedrahaman50.github.io/JavaScript30/30-Whack-A-Mole/"
+      "id": "27",
+      "title": "Day 30",
+      "description": "Finished working on the last project from #JavaScript30 challenge by @wesbos\n\nToday I learned to make a Whack-A-Mole game where players can score by clicking on the disappearing moles within 10 seconds.\n\nLink: https://junayedrahaman50.github.io/JavaScript30/30-Whack-A-Mole/"
     },
     {
-      "id": 28,
-      "Day": "Day 29",
-      "Content": "Finished working on Project 29 from #JavaScript30 challenge by @wesbos\n\nToday I learned to implement a countdown timer where users can set a timer using preset times or by submitting a form.\n\nLink: https://junayedrahaman50.github.io/JavaScript30/29-Countdown-Timer/"
+      "id": "28",
+      "title": "Day 29",
+      "description": "Finished working on Project 29 from #JavaScript30 challenge by @wesbos\n\nToday I learned to implement a countdown timer where users can set a timer using preset times or by submitting a form.\n\nLink: https://junayedrahaman50.github.io/JavaScript30/29-Countdown-Timer/"
     },
     {
-      "id": 29,
-      "Day": "Day 28",
-      "Content": "Finished working on Project 28 from #JavaScript30 challenge by @wesbos\n\nToday I learned to implement a slider that controls video playback rate.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
+      "id": "29",
+      "title": "Day 28",
+      "description": "Finished working on Project 28 from #JavaScript30 challenge by @wesbos\n\nToday I learned to implement a slider that controls video playback rate.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
     },
     {
-      "id": 30,
-      "Day": "Day 27",
-      "Content": "Finished working on Project 27 from #JavaScript30 challenge by @wesbos\n\nToday I learned to implement click and drag horizontal scrolling using mouse events, and pageX, offsetLeft, scrollLeft properties.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
+      "id": "30",
+      "title": "Day 27",
+      "description": "Finished working on Project 27 from #JavaScript30 challenge by @wesbos\n\nToday I learned to implement click and drag horizontal scrolling using mouse events, and pageX, offsetLeft, scrollLeft properties.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
     },
     {
-      "id": 31,
-      "Day": "Day 26",
-      "Content": "Finished working on Project 26 from #JavaScript30 challenge by @wesbos\n\nToday I learned to implement follow along navigation using getBoundingClientRect() method, and mouseenter, mouseleave events.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
+      "id": "31",
+      "title": "Day 26",
+      "description": "Finished working on Project 26 from #JavaScript30 challenge by @wesbos\n\nToday I learned to implement follow along navigation using getBoundingClientRect() method, and mouseenter, mouseleave events.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
     },
     {
-      "id": 32,
-      "Day": "Day 25",
-      "Content": "Finished working on Project 25 from #JavaScript30 challenge by @wesbos\n\nToday I learned about Event Capture, Propagation, Bubbling, and once.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
+      "id": "32",
+      "title": "Day 25",
+      "description": "Finished working on Project 25 from #JavaScript30 challenge by @wesbos\n\nToday I learned about Event Capture, Propagation, Bubbling, and once.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
     },
     {
-      "id": 33,
-      "Day": "Day 24",
-      "Content": "Finished working on Project 24 Sticky Nav from #JavaScript30 challenge by @wesbos\n\nToday I learned to create sticky navigation bar with animations that works based on vertical scroll position of the window(window.scrollY).\n\nLink: https://junayedrahaman50.github.io/JavaScript30/24-Sticky-Nav/"
+      "id": "33",
+      "title": "Day 24",
+      "description": "Finished working on Project 24 Sticky Nav from #JavaScript30 challenge by @wesbos\n\nToday I learned to create sticky navigation bar with animations that works based on vertical scroll position of the window(window.scrollY).\n\nLink: https://junayedrahaman50.github.io/JavaScript30/24-Sticky-Nav/"
     },
     {
-      "id": 34,
-      "Day": "Day 23",
-      "Content": "Finished working on Project 23 Speech Synthesis from #JavaScript30 challenge by @wesbos\n\nToday I learned to create text-to-speech web app using SpeechSynthesis and SpeechSynthesisUtterance interface of Web Speech API.\n\nLink: https://junayedrahaman50.github.io/JavaScript30/23-Speech-Synthesis/"
+      "id": "34",
+      "title": "Day 23",
+      "description": "Finished working on Project 23 Speech Synthesis from #JavaScript30 challenge by @wesbos\n\nToday I learned to create text-to-speech web app using SpeechSynthesis and SpeechSynthesisUtterance interface of Web Speech API.\n\nLink: https://junayedrahaman50.github.io/JavaScript30/23-Speech-Synthesis/"
     },
     {
-      "id": 35,
-      "Day": "Day 22",
-      "Content": "Finished working on Project 22 Follow Along Link Highlighter from #JavaScript30 challenge by @wesbos\n\nToday I learned to make a follow-along link highlighter using getBoundingClientRect() method that provides element's size and position."
+      "id": "35",
+      "title": "Day 22",
+      "description": "Finished working on Project 22 Follow Along Link Highlighter from #JavaScript30 challenge by @wesbos\n\nToday I learned to make a follow-along link highlighter using getBoundingClientRect() method that provides element's size and position."
     },
     {
-      "id": 36,
-      "Day": "Day 21",
-      "Content": "Finished working on Project 21 Geolocation from #JavaScript30 challenge by @wesbos\n\nToday I learned to access user's location using Geolocation API and made an web app that shows user's speed and direction.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
+      "id": "36",
+      "title": "Day 21",
+      "description": "Finished working on Project 21 Geolocation from #JavaScript30 challenge by @wesbos\n\nToday I learned to access user's location using Geolocation API and made an web app that shows user's speed and direction.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
     },
     {
-      "id": 37,
-      "Day": "Day 20",
-      "Content": "Finished working on Project 20 Speech Detection from #JavaScript30 challenge by @wesbos\n\nToday I learned about different events, properties, and methods of SpeechRecognition interface and built a web app that generates transcripts while speaking."
+      "id": "37",
+      "title": "Day 20",
+      "description": "Finished working on Project 20 Speech Detection from #JavaScript30 challenge by @wesbos\n\nToday I learned about different events, properties, and methods of SpeechRecognition interface and built a web app that generates transcripts while speaking."
     },
     {
-      "id": 38,
-      "Day": "Day 19",
-      "Content": "Finished working on Project 19 Webcam Fun from #JavaScript30 challenge by @wesbos\n\nToday I learned to access user's camera, draw video feed to canvas, apply filters, and take snapshot. I have modified the UI and added buttons to apply filters."
+      "id": "38",
+      "title": "Day 19",
+      "description": "Finished working on Project 19 Webcam Fun from #JavaScript30 challenge by @wesbos\n\nToday I learned to access user's camera, draw video feed to canvas, apply filters, and take snapshot. I have modified the UI and added buttons to apply filters."
     },
     {
-      "id": 39,
-      "Day": "Day 18",
-      "Content": "Finished working on Project 18 Adding Up Times with Reduce from #JavaScript30 challenge by @wesbos\n\nToday I learned to add up values in data attribute to calculate total time using map and reduce method.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
+      "id": "39",
+      "title": "Day 18",
+      "description": "Finished working on Project 18 Adding Up Times with Reduce from #JavaScript30 challenge by @wesbos\n\nToday I learned to add up values in data attribute to calculate total time using map and reduce method.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
     },
     {
-      "id": 40,
-      "Day": "Day 17",
-      "Content": "Finished working on Project 17 Sort Without Articles from #JavaScript30 challenge by @wesbos\n\nToday I learned to sort an array by removing articles(a, an, the) from array elements.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
+      "id": "40",
+      "title": "Day 17",
+      "description": "Finished working on Project 17 Sort Without Articles from #JavaScript30 challenge by @wesbos\n\nToday I learned to sort an array by removing articles(a, an, the) from array elements.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
     },
     {
-      "id": 41,
-      "Day": "Day 16",
-      "Content": "Finished working on Project 16 Mouse Move Shadow from #JavaScript30 challenge by @wesbos\n\nToday I learned to calculate text-shadow of an element based on mouse movement.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
+      "id": "41",
+      "title": "Day 16",
+      "description": "Finished working on Project 16 Mouse Move Shadow from #JavaScript30 challenge by @wesbos\n\nToday I learned to calculate text-shadow of an element based on mouse movement.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
     },
     {
-      "id": 42,
-      "Day": "Day 15",
-      "Content": "Finished working on Project 15 localStorage from #JavaScript30 challenge by @wesbos\n\nToday I learned about localStorage, and Event Delegation.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
+      "id": "42",
+      "title": "Day 15",
+      "description": "Finished working on Project 15 localStorage from #JavaScript30 challenge by @wesbos\n\nToday I learned about localStorage, and Event Delegation.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30"
     },
     {
-      "id": 43,
-      "Day": "Day 14",
-      "Content": "Finished working on Project 14 JavaScript References VS Copying from #JavaScript30 challenge by @wesbos\n\nToday I learned about references, shallow copy, and deep copy.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/14-JavaScript-References-VS-Copying"
+      "id": "43",
+      "title": "Day 14",
+      "description": "Finished working on Project 14 JavaScript References VS Copying from #JavaScript30 challenge by @wesbos\n\nToday I learned about references, shallow copy, and deep copy.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/14-JavaScript-References-VS-Copying"
     },
     {
-      "id": 44,
-      "Day": "Day 13",
-      "Content": "Finished working on Project 13 Slide in on Scroll from #JavaScript30 challenge by @wesbos\n\nToday I learned about debouncing a function, scrollY, and offsetTop properties.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/13-SlideIn-On-Scroll"
+      "id": "44",
+      "title": "Day 13",
+      "description": "Finished working on Project 13 Slide in on Scroll from #JavaScript30 challenge by @wesbos\n\nToday I learned about debouncing a function, scrollY, and offsetTop properties.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/13-SlideIn-On-Scroll"
     },
     {
-      "id": 45,
-      "Day": "Day 12",
-      "Content": "Finished working on Project 12 Key Sequence Detection from #JavaScript30 challenge by @wesbos\n\nGitHub link: https://junayedrahaman50.github.io/JavaScript30/12-Key-Sequence-Detection/"
+      "id": "45",
+      "title": "Day 12",
+      "description": "Finished working on Project 12 Key Sequence Detection from #JavaScript30 challenge by @wesbos\n\nGitHub link: https://junayedrahaman50.github.io/JavaScript30/12-Key-Sequence-Detection/"
     },
     {
-      "id": 46,
-      "Day": "Day 11",
-      "Content": "Finished working on Project 11 Custom Video Player from #JavaScript30 challenge by @wesbos\n\nToday I learned to create video player using some HTMLMediaElement properties, and methods.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/11-Custom-Video-Player"
+      "id": "46",
+      "title": "Day 11",
+      "description": "Finished working on Project 11 Custom Video Player from #JavaScript30 challenge by @wesbos\n\nToday I learned to create video player using some HTMLMediaElement properties, and methods.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/11-Custom-Video-Player"
     },
     {
-      "id": 47,
-      "Day": "Day 10",
-      "Content": "Finished working on Project 10 Hold Shift and Check Boxes from #JavaScript30 challenge by @wesbos\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/10-Hold-Shift-and-Check-Checkboxes"
+      "id": "47",
+      "title": "Day 10",
+      "description": "Finished working on Project 10 Hold Shift and Check Boxes from #JavaScript30 challenge by @wesbos\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/10-Hold-Shift-and-Check-Checkboxes"
     },
     {
-      "id": 48,
-      "Day": "Day 9",
-      "Content": "Finished working on Project 09 Dev Tools Domination from #JavaScript30 challenge by @wesbos\n\nToday I learned about some useful chrome dev tool tricks, and console methods.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/09-Dev-Tools-Domination"
+      "id": "48",
+      "title": "Day 9",
+      "description": "Finished working on Project 09 Dev Tools Domination from #JavaScript30 challenge by @wesbos\n\nToday I learned about some useful chrome dev tool tricks, and console methods.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/09-Dev-Tools-Domination"
     },
     {
-      "id": 49,
-      "Day": "Day 8",
-      "Content": "Finished working on Project 08 Fun with HTML5 Canvas from #JavaScript30 challenge by @wesbos\n\nToday I learned about some CanvasRenderingContext2D properties, hsl(), and some mouse events.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/08-Fun-with-HTML5-Canvas"
+      "id": "49",
+      "title": "Day 8",
+      "description": "Finished working on Project 08 Fun with HTML5 Canvas from #JavaScript30 challenge by @wesbos\n\nToday I learned about some CanvasRenderingContext2D properties, hsl(), and some mouse events.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/08-Fun-with-HTML5-Canvas"
     },
     {
-      "id": 50,
-      "Day": "Day 7",
-      "Content": "Finished working on Project 07 Array Cardio Day 2 from #JavaScript30 challenge by @wesbos\n\nToday I learned Array some, every, find, findIndex, slice, and splice methods.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/07-Array-Cardio-Day-2"
+      "id": "50",
+      "title": "Day 7",
+      "description": "Finished working on Project 07 Array Cardio Day 2 from #JavaScript30 challenge by @wesbos\n\nToday I learned Array some, every, find, findIndex, slice, and splice methods.\n\nGitHub link: https://github.com/junayedrahaman50/JavaScript30/tree/main/07-Array-Cardio-Day-2"
     },
     {
-      "id": 51,
-      "Day": "Day 6",
-      "Content": "Finished working on Project 06 Type Ahead from #JavaScript30 Challenge by @wesbos\n\nI've added a markdown in the repo describing my learnings.\n\nRepo: https://github.com/junayedrahaman50/JavaScript30/tree/main/06-Type-Ahead"
+      "id": "51",
+      "title": "Day 6",
+      "description": "Finished working on Project 06 Type Ahead from #JavaScript30 Challenge by @wesbos\n\nI've added a markdown in the repo describing my learnings.\n\nRepo: https://github.com/junayedrahaman50/JavaScript30/tree/main/06-Type-Ahead"
     },
     {
-      "id": 52,
-      "Day": "Day 5",
-      "Content": "Finished working on Project 05 Flex Panel Gallery from #JavaScript30 Challenge by @wesbos\n\nI've added a markdown in the repo describing my learnings.\n\nRepo: https://github.com/junayedrahaman50/JavaScript30/tree/main/05-Flex-Panel-Gallery"
+      "id": "52",
+      "title": "Day 5",
+      "description": "Finished working on Project 05 Flex Panel Gallery from #JavaScript30 Challenge by @wesbos\n\nI've added a markdown in the repo describing my learnings.\n\nRepo: https://github.com/junayedrahaman50/JavaScript30/tree/main/05-Flex-Panel-Gallery"
     },
     {
-      "id": 53,
-      "Day": "Day 4",
-      "Content": "Finished working on Project 04 Array Cardio Day 1 from #JavaScript30 Challenge by @wesbos\n\nI've added a markdown in the repo describing my learnings.\n\nRepo: https://github.com/junayedrahaman50/JavaScript30/tree/main/04-Array-Cardio-Day1"
+      "id": "53",
+      "title": "Day 4",
+      "description": "Finished working on Project 04 Array Cardio Day 1 from #JavaScript30 Challenge by @wesbos\n\nI've added a markdown in the repo describing my learnings.\n\nRepo: https://github.com/junayedrahaman50/JavaScript30/tree/main/04-Array-Cardio-Day1"
     },
     {
-      "id": 54,
-      "Day": "Day 3",
-      "Content": "Finished working on Project 03 CSS Variables from #JavaScript30 Challenge by @wesbos\n\nI've added a markdown in the repo explaining my learnings.\n\nRepo: https://github.com/junayedrahaman50/JavaScript30/tree/main/03-CSS-Variables"
+      "id": "54",
+      "title": "Day 3",
+      "description": "Finished working on Project 03 CSS Variables from #JavaScript30 Challenge by @wesbos\n\nI've added a markdown in the repo explaining my learnings.\n\nRepo: https://github.com/junayedrahaman50/JavaScript30/tree/main/03-CSS-Variables"
     },
     {
-      "id": 55,
-      "Day": "Day 2",
-      "Content": "Finished working on Project 02 JS & CSS Clock from #JavaScript30 Challenge by @wesbos\n\nI've added a markdown in the repo describing my work.\n\nGitHub: https://github.com/junayedrahaman50/JavaScript30/tree/main/02-JS-CSS-Clock"
+      "id": "55",
+      "title": "Day 2",
+      "description": "Finished working on Project 02 JS & CSS Clock from #JavaScript30 Challenge by @wesbos\n\nI've added a markdown in the repo describing my work.\n\nGitHub: https://github.com/junayedrahaman50/JavaScript30/tree/main/02-JS-CSS-Clock"
     },
     {
-      "id": 56,
-      "Day": "Day 1",
-      "Content": "Finished working on Project 01 Drum Kit from #JavaScript30 by @wesbos\n\nWhat I learned:\n- Working with kbd elements.\n- Using data attributes.\n- Using transitionend event.\n- Working with audio files.\n\nLive Site: https://junayedrahaman50.github.io/JavaScript30/01-JS-Drum-Kit/"
+      "id": "56",
+      "title": "Day 1",
+      "description": "Finished working on Project 01 Drum Kit from #JavaScript30 by @wesbos\n\nWhat I learned:\n- Working with kbd elements.\n- Using data attributes.\n- Using transitionend event.\n- Working with audio files.\n\nLive Site: https://junayedrahaman50.github.io/JavaScript30/01-JS-Drum-Kit/"
+    },
+    {
+      "id": "0bdc",
+      "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, unde.fsgndsgkldsgkldsglkmsdkmlgdskl",
+      "description": "sdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
     }
   ]
 }

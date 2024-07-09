@@ -190,7 +190,8 @@ body {
 }
 
 .btn-primary-edit,
-.btn-primary-share {
+.btn-primary-share,
+.btn-primary--submit {
   font-size: 1.6rem;
   padding: 1rem 2rem;
   background-color: var(--primary-tint-color);
@@ -293,7 +294,54 @@ body {
   z-index: 5;
 }
 
+/* input fields to add new post */
+.post-input {
+  margin-top: 1rem;
+  border: 2px solid #e1e1e1;
+  color: #333;
+  line-height: 1.5;
+  width: 100%;
+  height: 5.6rem;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: inherit;
+  appearance: none;
+  outline: none;
+  transition: border 0.3s ease;
+}
+.post-input--title {
+  padding: 0 2.8rem;
+}
+
+.post-input--description {
+  padding: 1.4rem 2.8rem;
+  /* margin-top: 2rem; */
+  height: 15rem;
+  resize: none;
+}
+/* character counter */
+.counter-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.character-counter {
+  color: #333;
+  font-size: 1.4rem;
+  margin-top: 8px;
+}
+
+/* .character-counter:not(.character-counter--last) {
+  
+} */
+
 .error {
+  color: var(--error-color);
+}
+.error-form {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
   color: var(--error-color);
 }
 
