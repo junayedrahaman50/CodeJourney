@@ -196,9 +196,9 @@ body {
   gap: 0.6rem;
 }
 
-.btn-primary:hover {
-  /* background-color: #f45d8a; */
-}
+/* .btn-primary:hover { */
+/* background-color: #f45d8a; */
+/* } */
 .content {
   display: flex;
   flex-wrap: wrap;
