@@ -189,13 +189,10 @@ body {
   gap: 1rem;
 }
 
-.btn-primary-edit,
-.btn-primary-share,
-.btn-primary--submit {
-  font-size: 1.6rem;
+.btn-primary--md {
+  font-size: 1.4rem;
   padding: 1rem 2rem;
   background-color: var(--primary-tint-color);
-  gap: 0.8rem;
 }
 
 .btn-primary:hover {
@@ -279,7 +276,7 @@ body {
 
 .modal-buttons {
   display: flex;
-  gap: 2rem;
+  justify-content: space-between;
 }
 
 .overlay {

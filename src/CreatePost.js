@@ -61,7 +61,7 @@ const CreatePost = ({ visible, setVisible }) => {
           <button onClick={closeModal} className="close-modal">
             &times;
           </button>
-          <h2 className="title">New Post</h2>
+          <h2 className="title">New post</h2>
           <form>
             <input
               type="text"
@@ -95,7 +95,7 @@ const CreatePost = ({ visible, setVisible }) => {
               disabled={isLoading}
               type="submit"
               onClick={handleSubmit}
-              className="btn-primary btn-primary--submit"
+              className="btn-primary btn-primary--md"
             >
               Submit
             </button>

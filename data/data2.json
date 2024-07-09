@@ -1,14 +1,54 @@
 {
   "posts": [
     {
-      "id": "803e",
-      "title": "hello buildspace",
-      "description": "buildspace is fub"
+      "id": "A1B2",
+      "title": "Day 1: #100DaysOfCode Begins 🚀",
+      "description": "Starting my web dev journey with HTML, CSS & JS basics. Built a Cat Photo Website on FreeCodeCamp & a Cafe Menu. 8 hours/day for 100 days. Let's do this 💪!"
     },
     {
-      "id": "c5e7",
-      "title": "Lorem ipsum",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. In cumque impedit repellat asperiores iste quod harum aliquam ab libero reiciendis."
+      "id": "C3D4",
+      "title": "Day 2: #100DaysOfCode - Input & Variables 🚀",
+      "description": "Day 2 of #100DaysOfCode: Learning input and variables in Python. Built a program to take user input and store it in a variable. 📚💻"
+    },
+    {
+      "id": "E5F6",
+      "title": "Day 3: #100DaysOfCode - Concatenation 💪",
+      "description": "Day 3 of #100DaysOfCode: Mastering concatenation in Python. Fixed common coding errors and built a Cat Photo Website on FreeCodeCamp. 🐈💻"
+    },
+    {
+      "id": "G7H8",
+      "title": "Day 4: #100DaysOfCode - Functions 🎉",
+      "description": "Day 4 of #100DaysOfCode: Exploring functions in Python. Learned how to define and call functions to make code more efficient. 📚💻"
+    },
+    {
+      "id": "I9J0",
+      "title": "Day 5: #100DaysOfCode - Lists 📝",
+      "description": "Day 5 of #100DaysOfCode: Working with lists in Python. Learned how to create, index, and manipulate lists. 📚💻"
+    },
+    {
+      "id": "K1L2",
+      "title": "Day 6: #100DaysOfCode - Conditional Statements 🤔",
+      "description": "Day 6 of #100DaysOfCode: Understanding conditional statements in Python. Learned how to use if-else statements to control program flow. 📚💻"
+    },
+    {
+      "id": "M3N4",
+      "title": "Day 7: #100DaysOfCode - Loops 🔄",
+      "description": "Day 7 of #100DaysOfCode: Mastering loops in Python. Learned how to use for and while loops to iterate over data. 📚💻"
+    },
+    {
+      "id": "O5P6",
+      "title": "Day 8: #100DaysOfCode - Dictionaries 📚",
+      "description": "Day 8 of #100DaysOfCode: Working with dictionaries in Python. Learned how to create and manipulate dictionaries. 💻"
+    },
+    {
+      "id": "Q7R8",
+      "title": "Day 9: #100DaysOfCode - Object-Oriented Programming 📈",
+      "description": "Day 9 of #100DaysOfCode: Exploring object-oriented programming in Python. Learned how to define classes and objects. 📚💻"
+    },
+    {
+      "id": "S9T0",
+      "title": "Day 10: #100DaysOfCode - File Input/Output 📁",
+      "description": "Day 10 of #100DaysOfCode: Learning file input/output in Python. Learned how to read and write files. 📚💻"
     }
   ]
 }

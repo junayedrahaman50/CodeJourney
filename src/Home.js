@@ -1,5 +1,5 @@
 import React from "react";
-import { Plus, NotebookPen, Notebook, Share2 } from "lucide-react";
+import { Plus, NotebookPen, Notebook, Share2, Trash2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import useFetch from "./useFetch";
 import CreatePost from "./CreatePost";
@@ -72,13 +72,16 @@ const Home = () => {
                   {renderContent(selectedPost.description)}
                 </p>
                 <div className="modal-buttons">
-                  <button className="btn-primary btn-primary-edit">
+                  <button className="btn-primary btn-primary--md">
                     <NotebookPen /> Edit
                   </button>
-                  <button className="btn-primary btn-primary-edit">
+                  <button className="btn-primary btn-primary--md">
+                    <Trash2 /> Delete
+                  </button>
+                  <button className="btn-primary btn-primary--md">
                     <Notebook /> Notes
                   </button>
-                  <button className="btn-primary btn-primary-edit">
+                  <button className="btn-primary btn-primary--md">
                     <Share2 /> Share
                   </button>
                 </div>
@@ -90,7 +93,8 @@ const Home = () => {
       <div className="container">
         <div className="header mt-lg">
           <h1 className="heading-primary">
-            Junayed's 100 Days of Code Journey
+            {/* Junayed's 100 Days of Code Journey */}
+            Track your coding progress
           </h1>
           {/* <button className="btn-primary mt-md" onClick={handleClick}>
             Follow my journey on
@@ -98,31 +102,34 @@ const Home = () => {
           </button> */}
           <button className="btn-primary mt-md" onClick={handleClick}>
             <Plus />
-            New Post
+            New post
           </button>
         </div>
         <div className="content">
           {error && <div className="error">{error}</div>}
           {isPending && <div className="loading">Loading...</div>}
           {posts &&
-            posts.map((post) => (
-              <div
-                onClick={() => handleModal(post)}
-                className="card mt-lg"
-                key={post.id}
-              >
-                <h2
-                  style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}
+            posts
+              .slice()
+              .reverse()
+              .map((post) => (
+                <div
+                  onClick={() => handleModal(post)}
+                  className="card mt-lg"
+                  key={post.id}
                 >
-                  {post.title}
-                </h2>
-                <p style={{ fontSize: "var(--font-size-medium)" }}>
-                  {post.description.length > 100
-                    ? post.description.substring(0, 100) + "..."
-                    : renderContent(post.description)}
-                </p>
-              </div>
-            ))}
+                  <h2
+                    style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}
+                  >
+                    {post.title}
+                  </h2>
+                  <p style={{ fontSize: "var(--font-size-medium)" }}>
+                    {post.description.length > 100
+                      ? post.description.substring(0, 100) + "..."
+                      : renderContent(post.description)}
+                  </p>
+                </div>
+              ))}
         </div>
       </div>
       <CreatePost visible={visible} setVisible={setVisible} />
