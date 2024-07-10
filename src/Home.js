@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import useFetch from "./useFetch";
 import CreatePost from "./CreatePost";
 import EditPost from "./EditPost";
+import SharePost from "./SharePost";
+import DeletePost from "./DeletePost";
 
 const Home = () => {
   const {
@@ -15,6 +17,9 @@ const Home = () => {
   const [selectedPost, setSelectedPost] = useState(null);
   const [visible, setVisible] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
+  const [showShare, setShowShare] = useState(false);
+  const [showDelete, setShowDelete] = useState(false);
+  const [showPostDetails, setShowPostDetails] = useState(true);
 
   const handleClick = () => {
     // window.open("https://x.com/junayed_rahaman", "_blank");
@@ -28,7 +33,23 @@ const Home = () => {
 
   const closeModal = () => {
     setShowModal(false);
+    setShowShare(false);
+    setShowEdit(false);
+    setShowDelete(false);
     setSelectedPost(null);
+  };
+
+  // const initDelete = () => {
+  //   setShowEdit(false);
+  //   setShowDelete(true);
+  // };
+
+  const handleDelete = () => {
+    fetch(`http://localhost:9000/posts/${selectedPost.id}`, {
+      method: "DELETE",
+    }).then(() => {
+      window.location.reload();
+    });
   };
 
   useEffect(() => {
@@ -63,6 +84,7 @@ const Home = () => {
             onClick={closeModal}
             className="overlay animate__animated animate__fadeIn"
           ></div>
+          {/* tomorrow make that following modal another component */}
           {!showEdit ? (
             <div className="modal animate__animated animate__fadeIn">
               {selectedPost && (
@@ -81,13 +103,19 @@ const Home = () => {
                     >
                       <NotebookPen /> Edit
                     </button>
-                    <button className="btn-primary btn-primary--md">
+                    <button
+                      onClick={handleDelete}
+                      className="btn-primary btn-primary--md"
+                    >
                       <Trash2 /> Delete
                     </button>
                     <button className="btn-primary btn-primary--md">
                       <Notebook /> Notes
                     </button>
-                    <button className="btn-primary btn-primary--md">
+                    <button
+                      onClick={() => setShowShare(true)}
+                      className="btn-primary btn-primary--md"
+                    >
                       <Share2 /> Share
                     </button>
                   </div>
@@ -96,6 +124,20 @@ const Home = () => {
             </div>
           ) : (
             <EditPost selectedPost={selectedPost} setShowEdit={setShowEdit} />
+          )}
+          {showShare && (
+            <SharePost
+              selectedPost={selectedPost}
+              setShowShare={setShowShare}
+              renderContent={renderContent}
+            />
+          )}
+          {showDelete && (
+            <DeletePost
+              selectedPost={selectedPost}
+              setShowDelete={setShowDelete}
+              handleDelete={handleDelete}
+            />
           )}
         </>
       )}
