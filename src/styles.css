@@ -68,6 +68,12 @@ body {
   background-color: #f1f1f1;
   /* position: relative; */
 }
+
+/* .App {
+  min-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+} */
 /* body::after {
   height: 100vh;
   position: relative;
@@ -107,7 +113,7 @@ body {
   margin-top: 4.8rem;
 }
 .main {
-  width: 1519px;
+  min-width: 1200px;
   margin: 0 auto;
 }
 .container {
@@ -115,6 +121,7 @@ body {
   margin: 0 auto;
 }
 .nav {
+  min-width: 1200px;
   background-color: #fff;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
   border-bottom: 2px solid #e1e1e1;
@@ -243,6 +250,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 40%;
+  min-width: 607.675px;
+  max-width: 607.675px;
   background-color: #fefefe;
   padding: 4.8rem;
   border-radius: 1rem;
@@ -250,6 +259,23 @@ body {
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
   overflow-wrap: break-word;
+}
+
+/* Delete yes/no modal */
+.modal--delete {
+  width: 20%;
+  padding: 2rem;
+  min-width: 303.837px;
+  max-width: 303.837px;
+}
+
+.title.title--delete {
+  font-weight: var(--BOLD);
+  margin: 2rem;
+  text-align: center;
+}
+.modal-buttons.modal-buttons--delete {
+  justify-content: space-around;
 }
 
 .close-modal {

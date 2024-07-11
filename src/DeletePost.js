@@ -2,28 +2,12 @@ import { Check, X } from "lucide-react";
 
 const DeletePost = ({ selectedPost, closeDelete, closeModal, deletePost }) => {
   return (
-    <div className="modal animate__animated animate__fadeIn">
+    <div className="modal modal--delete animate__animated animate__fadeIn">
       {selectedPost && (
         <>
-          <button onClick={closeModal} className="close-modal">
-            &times;
-          </button>
+          <h2 className="title title--delete">Are you sure?</h2>
 
-          <h2
-            className="title"
-            style={{
-              textAlign: "center",
-              fontWeight: "var(--SEMI_BOLD)",
-              margin: "1rem 0",
-            }}
-          >
-            Are you sure?
-          </h2>
-
-          <div
-            className="modal-buttons"
-            style={{ justifyContent: "center", gap: "0.8rem" }}
-          >
+          <div className="modal-buttons modal-buttons--delete">
             <button
               onClick={deletePost}
               className="btn-primary btn-primary--md"

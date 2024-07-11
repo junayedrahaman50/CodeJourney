@@ -72,6 +72,7 @@ const Home = () => {
 
   const deletePost = () => {
     setShowDelete(false);
+    setShowModal(false);
     handleDelete();
   };
 
