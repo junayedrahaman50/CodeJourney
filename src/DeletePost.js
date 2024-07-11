@@ -1,15 +1,11 @@
 import { Check, X } from "lucide-react";
 
-const DeletePost = ({ selectedPost, setShowDelete, handleDelete }) => {
-  const deletePost = () => {
-    setShowDelete(false);
-    handleDelete();
-  };
+const DeletePost = ({ selectedPost, closeDelete, closeModal, deletePost }) => {
   return (
     <div className="modal animate__animated animate__fadeIn">
       {selectedPost && (
         <>
-          <button onClick={() => setShowDelete(false)} className="close-modal">
+          <button onClick={closeModal} className="close-modal">
             &times;
           </button>
 
@@ -35,7 +31,7 @@ const DeletePost = ({ selectedPost, setShowDelete, handleDelete }) => {
               <Check /> Yes
             </button>
             <button
-              onClick={() => setShowDelete(false)}
+              onClick={closeDelete}
               className="btn-primary btn-primary--md"
             >
               <X /> No

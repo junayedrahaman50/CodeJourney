@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const EditPost = ({ selectedPost, setShowEdit }) => {
+const EditPost = ({ selectedPost, closeModal }) => {
   const [postData, setPostData] = useState(selectedPost);
   const [isValid, setIsValid] = useState(true);
   const [titleCount, setTitleCount] = useState(postData.title.length);
@@ -46,7 +46,7 @@ const EditPost = ({ selectedPost, setShowEdit }) => {
   return (
     <>
       <div className="modal animate__animated animate__fadeIn">
-        <button onClick={() => setShowEdit(false)} className="close-modal">
+        <button onClick={closeModal} className="close-modal">
           &times;
         </button>
         <h2 className="title">Edit post</h2>

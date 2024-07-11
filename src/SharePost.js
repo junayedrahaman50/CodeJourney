@@ -1,11 +1,11 @@
 import { Facebook, Linkedin, Twitter, Clipboard } from "lucide-react";
 
-const SharePost = ({ selectedPost, setShowShare, renderContent }) => {
+const SharePost = ({ selectedPost, closeModal }) => {
   return (
     <div className="modal animate__animated animate__fadeIn">
       {selectedPost && (
         <>
-          <button onClick={() => setShowShare(false)} className="close-modal">
+          <button onClick={closeModal} className="close-modal">
             &times;
           </button>
           <div

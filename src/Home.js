@@ -1,11 +1,12 @@
 import React from "react";
-import { Plus, NotebookPen, Notebook, Share2, Trash2 } from "lucide-react";
+import { Plus } from "lucide-react";
 import { useState, useEffect } from "react";
 import useFetch from "./useFetch";
 import CreatePost from "./CreatePost";
 import EditPost from "./EditPost";
 import SharePost from "./SharePost";
 import DeletePost from "./DeletePost";
+import Modal from "./Modal";
 
 const Home = () => {
   const {
@@ -19,7 +20,7 @@ const Home = () => {
   const [showEdit, setShowEdit] = useState(false);
   const [showShare, setShowShare] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
-  const [showPostDetails, setShowPostDetails] = useState(true);
+  const [showPostDetails, setShowPostDetails] = useState(false);
 
   const handleClick = () => {
     // window.open("https://x.com/junayed_rahaman", "_blank");
@@ -29,6 +30,7 @@ const Home = () => {
   const handleModal = (post) => {
     setSelectedPost(post);
     setShowModal(true);
+    setShowPostDetails(true);
   };
 
   const closeModal = () => {
@@ -36,13 +38,29 @@ const Home = () => {
     setShowShare(false);
     setShowEdit(false);
     setShowDelete(false);
+    setShowPostDetails(false);
     setSelectedPost(null);
   };
 
-  // const initDelete = () => {
-  //   setShowEdit(false);
-  //   setShowDelete(true);
-  // };
+  const initDelete = () => {
+    setShowPostDetails(false);
+    setShowDelete(true);
+  };
+
+  const initShare = () => {
+    setShowShare(true);
+    setShowPostDetails(false);
+  };
+
+  const initEdit = () => {
+    setShowEdit(true);
+    setShowPostDetails(false);
+  };
+
+  const closeDelete = () => {
+    setShowPostDetails(true);
+    setShowDelete(false);
+  };
 
   const handleDelete = () => {
     fetch(`http://localhost:9000/posts/${selectedPost.id}`, {
@@ -50,6 +68,11 @@ const Home = () => {
     }).then(() => {
       window.location.reload();
     });
+  };
+
+  const deletePost = () => {
+    setShowDelete(false);
+    handleDelete();
   };
 
   useEffect(() => {
@@ -78,69 +101,41 @@ const Home = () => {
 
   return (
     <>
-      {showModal && (
-        <>
+      <>
+        {showModal && (
           <div
             onClick={closeModal}
             className="overlay animate__animated animate__fadeIn"
           ></div>
-          {/* tomorrow make that following modal another component */}
-          {!showEdit ? (
-            <div className="modal animate__animated animate__fadeIn">
-              {selectedPost && (
-                <>
-                  <button onClick={closeModal} className="close-modal">
-                    &times;
-                  </button>
-                  <h2 className="title">{selectedPost.title}</h2>
-                  <p className="description">
-                    {renderContent(selectedPost.description)}
-                  </p>
-                  <div className="modal-buttons">
-                    <button
-                      onClick={() => setShowEdit(true)}
-                      className="btn-primary btn-primary--md"
-                    >
-                      <NotebookPen /> Edit
-                    </button>
-                    <button
-                      onClick={handleDelete}
-                      className="btn-primary btn-primary--md"
-                    >
-                      <Trash2 /> Delete
-                    </button>
-                    <button className="btn-primary btn-primary--md">
-                      <Notebook /> Notes
-                    </button>
-                    <button
-                      onClick={() => setShowShare(true)}
-                      className="btn-primary btn-primary--md"
-                    >
-                      <Share2 /> Share
-                    </button>
-                  </div>
-                </>
-              )}
-            </div>
-          ) : (
-            <EditPost selectedPost={selectedPost} setShowEdit={setShowEdit} />
-          )}
-          {showShare && (
-            <SharePost
-              selectedPost={selectedPost}
-              setShowShare={setShowShare}
-              renderContent={renderContent}
-            />
-          )}
-          {showDelete && (
-            <DeletePost
-              selectedPost={selectedPost}
-              setShowDelete={setShowDelete}
-              handleDelete={handleDelete}
-            />
-          )}
-        </>
-      )}
+        )}
+        {/* tomorrow make that following modal another component */}
+        {showPostDetails && (
+          <Modal
+            selectedPost={selectedPost}
+            closeModal={closeModal}
+            initEdit={initEdit}
+            renderContent={renderContent}
+            initDelete={initDelete}
+            initShare={initShare}
+          />
+        )}
+        {showEdit && (
+          <EditPost selectedPost={selectedPost} closeModal={closeModal} />
+        )}
+
+        {showShare && (
+          <SharePost selectedPost={selectedPost} closeModal={closeModal} />
+        )}
+        {showDelete && (
+          <DeletePost
+            selectedPost={selectedPost}
+            closeDelete={closeDelete}
+            closeModal={closeModal}
+            deletePost={deletePost}
+          />
+        )}
+      </>
+
       <div className="container">
         <div className="header mt-lg">
           <h1 className="heading-primary">
