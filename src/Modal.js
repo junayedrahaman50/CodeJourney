@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { NotebookPen, Trash2, Notebook, Share2 } from "lucide-react";
 const Modal = ({
   closeModal,
@@ -28,9 +29,13 @@ const Modal = ({
             >
               <Trash2 /> Delete
             </button>
-            <button className="btn-primary btn-primary--md">
+            <Link
+              style={{ textDecoration: "none" }}
+              to={`/notes/${selectedPost.id}`}
+              className="btn-primary btn-primary--md"
+            >
               <Notebook /> Notes
-            </button>
+            </Link>
             <button onClick={initShare} className="btn-primary btn-primary--md">
               <Share2 /> Share
             </button>
