@@ -85,6 +85,9 @@ body {
 /* --primary-color: hsl(220.9 39.3% 11%); */
 /* --primary-tint-color: #f45d8a; */
 /* --primary-tint-color: hsl(220.9 39.3% 11%); */
+/* --primary-color: #cbc3e3;
+  --primary-accent-color: #faf9fc;
+  --primary-tint-color: #b7b0cc; */
 :root {
   --primary-color: #cbc3e3;
   --primary-accent-color: #faf9fc;
@@ -123,7 +126,8 @@ body {
 }
 .nav {
   min-width: 1200px;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: var(--primary-tint-color);
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
   border-bottom: 2px solid #e1e1e1;
 }
@@ -141,16 +145,18 @@ body {
   font-weight: var(--BOLD);
   letter-spacing: 0.5px;
   margin: 2.4rem 0 auto; /* add this one when img logo used */
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); */
 }
-.nav .container .title span {
+/* .nav .container .logo span {
   color: var(--primary-color);
-}
+} */
 .nav .container ul {
   display: flex;
   list-style: none;
   gap: 2.4rem;
 }
 .nav .container ul li {
+  color: #fff;
   font-size: var(--font-size-medium);
   font-weight: var(--DEFAULT);
   cursor: pointer;
@@ -161,7 +167,8 @@ body {
 }
 .nav .container ul li:hover {
   /* background-color: #feebf0; */
-  background-color: #f5f3f9;
+  /* background-color: #f5f3f9; */
+  background-color: #c5c0d6;
 }
 .header {
   text-align: center;
@@ -186,7 +193,7 @@ body {
   border-radius: 0.3rem;
   font-family: inherit;
   font-weight: var(--MEDIUM);
-  background-color: var(--primary-color);
+  background-color: var(--primary-tint-color);
   color: #fff;
   border: none;
   font-size: 1.8rem;
@@ -241,7 +248,7 @@ body {
 .card:hover {
   /* background-color: #feebf0; */
   background-color: var(--primary-accent-color);
-  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 /* modal */

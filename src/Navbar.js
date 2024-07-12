@@ -1,11 +1,11 @@
-import logo from "./images/logo4.png";
+import logo from "./images/logo5-edited.png";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="nav">
       <div className="container">
         <div className="logo">
-          {/* <span>100</span>Daysofcode */}
+          {/* <span>Code</span>Journey */}
           <img style={{ width: "20rem" }} src={logo} alt="logo" />
         </div>
         <ul>

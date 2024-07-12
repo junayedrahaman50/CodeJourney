@@ -1,4 +1,9 @@
 import { useState } from "react";
+
+const generateUniqueId = () => {
+  return Date.now().toString(36) + Math.random().toString(36).substr(2);
+};
+
 const CreateNote = ({
   newNoteContent,
   newNoteTitle,
@@ -11,7 +16,7 @@ const CreateNote = ({
   setShowOverlay,
   isValid,
   setIsValid,
-  closeNewNote,
+  closeModal,
   id,
 }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -23,6 +28,7 @@ const CreateNote = ({
     if (!isAnyFieldEmpty) {
       e.preventDefault();
       const newNote = {
+        id: generateUniqueId(), // Add a unique ID to the new note
         title: newNoteTitle,
         content: newNoteContent,
       };
@@ -68,22 +74,8 @@ const CreateNote = ({
 
   return (
     <>
-      {/* <input
-        type="text"
-        value={newNoteTitle}
-        onChange={(e) => setNewNoteTitle(e.target.value)}
-        placeholder="New note title"
-        className="post-input post-input--title mt-sm"
-      />
-      <textarea
-        value={newNoteContent}
-        onChange={(e) => setNewNoteContent(e.target.value)}
-        placeholder="New note content"
-        className="post-input post-input--description mt-sm"
-      /> */}
-
       <div className="modal animate__animated animate__fadeIn">
-        <button onClick={closeNewNote} className="close-modal">
+        <button onClick={closeModal} className="close-modal">
           &times;
         </button>
         <h2 className="title">New note</h2>

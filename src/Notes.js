@@ -4,6 +4,8 @@ import useFetch from "./useFetch";
 import { Plus } from "lucide-react";
 import { useState } from "react";
 import CreateNote from "./CreateNote";
+import NoteDetails from "./NoteDetails";
+import EditNote from "./EditNote";
 
 const Notes = () => {
   const { id } = useParams();
@@ -19,16 +21,33 @@ const Notes = () => {
   const [createNewNote, setCreateNewNote] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
   const [isValid, setIsValid] = useState(true);
+  const [selectedNote, setSelectedNote] = useState(null);
+  const [showEditNote, setShowEditNote] = useState(false);
+  const [noteDetails, setNoteDetails] = useState(false);
 
   const initNewNote = () => {
     setCreateNewNote(true);
     setShowOverlay(true);
   };
 
-  const closeNewNote = () => {
+  const initEdit = () => {
+    setShowEditNote(true);
+    setNoteDetails(false);
+  };
+
+  const handleModal = (note) => {
+    setSelectedNote(note);
+    setShowOverlay(true);
+    setNoteDetails(true);
+  };
+
+  const closeModal = () => {
     setCreateNewNote(false);
     setShowOverlay(false);
     setIsValid(true);
+    setSelectedNote(null);
+    setShowEditNote(false);
+    setNoteDetails(false);
   };
   const checkValid = () => {
     if (newNoteContent === "" || newNoteTitle === "") setIsValid(false);
@@ -60,9 +79,27 @@ const Notes = () => {
 
       {showOverlay && (
         <div
-          onClick={closeNewNote}
+          onClick={closeModal}
           className="overlay animate__animated animate__fadeIn"
         ></div>
+      )}
+
+      {noteDetails && (
+        <NoteDetails
+          selectedNote={selectedNote}
+          closeModal={closeModal}
+          initEdit={initEdit}
+          renderContent={renderContent}
+        />
+      )}
+
+      {showEditNote && (
+        <EditNote
+          selectedNote={selectedNote}
+          closeModal={closeModal}
+          post={post}
+          setData={setData}
+        />
       )}
 
       {createNewNote && (
@@ -72,7 +109,7 @@ const Notes = () => {
           newNoteContent={newNoteContent}
           setNewNoteContent={setNewNoteContent}
           setData={setData}
-          closeNewNote={closeNewNote}
+          closeModal={closeModal}
           isValid={isValid}
           setIsValid={setIsValid}
           checkValid={checkValid}
@@ -86,8 +123,12 @@ const Notes = () => {
         {error && <div className="error">{error}</div>}
         {isPending && <div className="loading">Loading...</div>}
         {post &&
-          post.notes.map((note, index) => (
-            <div className="card mt-lg" key={index}>
+          post.notes.map((note) => (
+            <div
+              className="card mt-lg"
+              key={note.id}
+              onClick={() => handleModal(note)}
+            >
               <h2 style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}>
                 {note.title}
               </h2>
