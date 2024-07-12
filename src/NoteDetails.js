@@ -1,5 +1,11 @@
 import { NotebookPen, Trash2 } from "lucide-react";
-const NoteDetails = ({ selectedNote, closeModal, initEdit, renderContent }) => {
+const NoteDetails = ({
+  selectedNote,
+  closeModal,
+  initEdit,
+  renderContent,
+  initDelete,
+}) => {
   return (
     <div className="modal animate__animated animate__fadeIn">
       {selectedNote && (
@@ -17,7 +23,7 @@ const NoteDetails = ({ selectedNote, closeModal, initEdit, renderContent }) => {
               <NotebookPen /> Edit
             </button>
             <button
-              //   onClick={initDelete}
+              onClick={initDelete}
               className="btn-primary btn-primary--md"
             >
               <Trash2 /> Delete

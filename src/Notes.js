@@ -6,6 +6,7 @@ import { useState } from "react";
 import CreateNote from "./CreateNote";
 import NoteDetails from "./NoteDetails";
 import EditNote from "./EditNote";
+import DeleteNote from "./DeleteNote";
 
 const Notes = () => {
   const { id } = useParams();
@@ -24,6 +25,7 @@ const Notes = () => {
   const [selectedNote, setSelectedNote] = useState(null);
   const [showEditNote, setShowEditNote] = useState(false);
   const [noteDetails, setNoteDetails] = useState(false);
+  const [showDelete, setShowDelete] = useState(false);
 
   const initNewNote = () => {
     setCreateNewNote(true);
@@ -33,6 +35,16 @@ const Notes = () => {
   const initEdit = () => {
     setShowEditNote(true);
     setNoteDetails(false);
+  };
+
+  const initDelete = () => {
+    setNoteDetails(false);
+    setShowDelete(true);
+  };
+
+  const closeDelete = () => {
+    setNoteDetails(true);
+    setShowDelete(false);
   };
 
   const handleModal = (note) => {
@@ -48,6 +60,7 @@ const Notes = () => {
     setSelectedNote(null);
     setShowEditNote(false);
     setNoteDetails(false);
+    setShowDelete(false);
   };
   const checkValid = () => {
     if (newNoteContent === "" || newNoteTitle === "") setIsValid(false);
@@ -89,6 +102,7 @@ const Notes = () => {
           selectedNote={selectedNote}
           closeModal={closeModal}
           initEdit={initEdit}
+          initDelete={initDelete}
           renderContent={renderContent}
         />
       )}
@@ -98,6 +112,16 @@ const Notes = () => {
           selectedNote={selectedNote}
           closeModal={closeModal}
           post={post}
+          setData={setData}
+        />
+      )}
+
+      {showDelete && (
+        <DeleteNote
+          closeDelete={closeDelete}
+          selectedNote={selectedNote}
+          post={post}
+          closeModal={closeModal}
           setData={setData}
         />
       )}
