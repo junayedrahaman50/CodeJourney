@@ -114,6 +114,7 @@ body {
 }
 .main {
   min-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
 }
 .container {
@@ -382,3 +383,20 @@ body {
 .animate__animated.animate__fadeIn {
   --animate-duration: 0.2s;
 }
+
+/* override default link styles */
+.link {
+  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: none; /* Remove the underline */
+}
+
+.link:visited,
+.link:active,
+.link:focus {
+  color: inherit; /* Ensure the color remains the same on visited, active, and focus states */
+  text-decoration: none; /* Remove the underline on visited, active, and focus states */
+}
+
+/* .link:hover { */
+/* text-decoration: underline; Optional: Add underline on hover */
+/* } */

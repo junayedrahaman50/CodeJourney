@@ -40,7 +40,12 @@
       "id": "M3N4",
       "title": "Day 7: #100DaysOfCode - Loops 🔄",
       "description": "Day 7 of #100DaysOfCode: Mastering loops in Python. Learned how to use for and while loops to iterate over data. 📚💻",
-      "notes": []
+      "notes": [
+        {
+          "title": "Note 1",
+          "content": "This is my first note"
+        }
+      ]
     },
     {
       "id": "O5P6",
@@ -52,7 +57,16 @@
       "id": "Q7R8",
       "title": "Day 9: #100DaysOfCode - Object-Oriented Programming 📈",
       "description": "Day 9 of #100DaysOfCode: Exploring object-oriented programming in Python. Learned how to define classes and objects. 📚💻",
-      "notes": []
+      "notes": [
+        {
+          "title": "Hola amigo!",
+          "content": "Amigos"
+        },
+        {
+          "title": "Hola amigos",
+          "content": "Amigos\nHermes \nRolex"
+        }
+      ]
     },
     {
       "id": "S9T0",
@@ -62,6 +76,18 @@
         {
           "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere sollicitudin aliquam ultrices sagittis orci a. Sit amet mauris commodo quis. Sapien eget mi proin sed. Purus non enim praesent elementum facilisis leo vel fringilla."
+        },
+        {
+          "title": "Hello",
+          "content": "Hello"
+        },
+        {
+          "title": "Hello",
+          "content": "Hello"
+        },
+        {
+          "title": "Hello how are you?",
+          "content": "Today I learned react it's lot's of fun."
         }
       ]
     }

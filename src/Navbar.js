@@ -1,4 +1,5 @@
 import logo from "./images/logo4.png";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="nav">
@@ -8,8 +9,10 @@ const Navbar = () => {
           <img style={{ width: "20rem" }} src={logo} alt="logo" />
         </div>
         <ul>
-          <li>Progress</li>
-          <li>Challenges</li>
+          <Link className="link" to="/">
+            <li>Home</li>
+          </Link>
+          <li>Good evening, Junayed</li>
         </ul>
       </div>
     </nav>
