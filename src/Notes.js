@@ -149,7 +149,7 @@ const Notes = () => {
         {post &&
           post.notes.map((note) => (
             <div
-              className="card mt-lg"
+              className="card mt-md"
               key={note.id}
               onClick={() => handleModal(note)}
             >

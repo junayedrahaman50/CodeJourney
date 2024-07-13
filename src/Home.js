@@ -162,7 +162,7 @@ const Home = () => {
               .map((post) => (
                 <div
                   onClick={() => handleModal(post)}
-                  className="card mt-lg"
+                  className="card mt-md"
                   key={post.id}
                 >
                   <h2
