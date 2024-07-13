@@ -1,3 +1,4 @@
+import { User2 } from "lucide-react";
 import logo from "./images/logo5-edited.png";
 import { Link } from "react-router-dom";
 const Navbar = () => {
@@ -10,9 +11,12 @@ const Navbar = () => {
         </div>
         <ul>
           <Link className="link" to="/">
-            <li>Home</li>
+            <li className="home">Home</li>
           </Link>
-          <li>Good evening, Junayed</li>
+          <li className="greeting">Good evening, Junayed</li>
+          <li className="user">
+            <User2 /> Junayed
+          </li>
         </ul>
       </div>
     </nav>

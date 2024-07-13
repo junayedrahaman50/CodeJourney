@@ -7,7 +7,7 @@ const SharePost = ({ selectedPost, closeModal }) => {
   if (!selectedPost) return null;
 
   const { title, description } = selectedPost;
-  const shareText = `${title}\n${description}`;
+  const shareText = `${title}\n\n${description}`;
 
   const generateTwitterShareURL = (text) => {
     return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
