@@ -89,9 +89,10 @@ body {
   --primary-accent-color: #faf9fc;
   --primary-tint-color: #b7b0cc; */
 :root {
-  --primary-color: #f45d8a;
+  --primary-color: #f1356d;
   /* --primary-accent-color: #faf9fc; */
-  --primary-tint-color: #f45d8a;
+  --primary-accent-color: #f45d8a;
+  --primary-tint-color: #f1356d;
   --toastify-font-family: "Poppins", sans-serif;
   --error-color: #e7195a;
   --font-size-small: 1.4rem;
@@ -121,7 +122,6 @@ body {
 }
 .main {
   /* min-width: 1200px; */
-  /* max-width: 1200px; */
   margin: 0 auto;
 }
 .container {
@@ -129,7 +129,6 @@ body {
   margin: 0 auto;
 }
 .nav {
-  /* min-width: 1200px; */
   /* background-color: #fff; */
   background-color: var(--primary-tint-color);
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
@@ -175,7 +174,8 @@ body {
 }
 .nav .container ul li:hover {
   /* background-color: #feebf0; */
-  background-color: #f67da1;
+  /* background-color: #f67da1; */
+  background-color: var(--primary-accent-color);
   /* background-color: #f5f3f9; */
   /* background-color: #c5c0d6; */
 }
@@ -225,7 +225,8 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #f67da1;
+  /* background-color: #f67da1; */
+  background-color: #f45d8a;
   /* background-color: #c5c0d6; */
 }
 .content {
@@ -441,6 +442,10 @@ body {
 .user {
   display: none;
 }
+.modal-buttons.modal-buttons--share {
+  justify-content: center;
+  gap: 0.8rem;
+}
 /* Media Queries */
 @media only screen and (max-width: 31em) {
   html {
@@ -484,7 +489,7 @@ body {
   }
   .btn-primary {
     appearance: none;
-    padding: 2.4rem 1.8rem;
+    padding: 1.2rem 2.4rem;
     border-radius: 0.3rem;
     font-family: inherit;
     font-weight: var(--MEDIUM);
@@ -516,8 +521,8 @@ body {
   .close-modal {
     position: absolute;
     top: 0;
-    right: 0.8rem;
-    font-size: 5rem;
+    right: 1rem;
+    font-size: 4rem;
     color: #333;
     cursor: pointer;
     border: none;
@@ -525,16 +530,16 @@ body {
     transition: color 0.3s ease;
   }
   .title {
-    font-size: 1.8rem;
-    margin: 2rem 0 1rem;
+    font-size: 2rem;
+    margin: 3.2rem 0 1rem;
   }
   .description {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 2rem;
   }
   .btn-primary--md {
-    font-size: 1rem;
-    padding: 0.8rem;
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
     background-color: var(--primary-tint-color);
     gap: 0.8rem;
   }
@@ -553,7 +558,7 @@ body {
     line-height: 1.5;
     width: 100%;
     border-radius: 8px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     font-family: inherit;
     appearance: none;
@@ -562,5 +567,24 @@ body {
   }
   .mt-lg {
     margin-top: 3rem;
+  }
+  .btn-primary--md svg {
+    display: none;
+  }
+  .btn-primary--md.tweet svg,
+  .btn-primary--md.linkedin svg,
+  .btn-primary--md.facebook svg,
+  .btn-primary--md.copy svg {
+    display: block;
+  }
+  .btn-primary--md.tweet,
+  .btn-primary--md.linkedin,
+  .btn-primary--md.facebook,
+  .btn-primary--md.copy {
+    padding: 1rem 1.4rem;
+  }
+  .modal-buttons.modal-buttons--share {
+    justify-content: center;
+    gap: 1.2rem;
   }
 }

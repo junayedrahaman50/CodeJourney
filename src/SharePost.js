@@ -28,10 +28,10 @@ const SharePost = ({ selectedPost, closeModal }) => {
   const handleCopyToClipboard = () => {
     navigator.clipboard.writeText(shareText).then(
       () => {
-        toast.success("Text copied to clipboard!");
+        alert("Text copied to clipboard!");
       },
       (err) => {
-        toast.error("Could not copy text: " + err);
+        console.error("Could not copy text: " + err);
       }
     );
   };
@@ -90,33 +90,30 @@ const SharePost = ({ selectedPost, closeModal }) => {
         receiving feedback. Plus, we're sure people will want to see what you've
         built! We've added some simple sharing options below.
       </div>
-      <div
-        className="modal-buttons"
-        style={{ justifyContent: "center", gap: "0.8rem" }}
-      >
+      <div className="modal-buttons modal-buttons--share">
         <button
-          className="btn-primary btn-primary--md"
+          className="btn-primary btn-primary--md tweet"
           onClick={() => handleShareClick(generateTwitterShareURL(shareText))}
         >
-          <Twitter /> Tweet
+          <Twitter />
         </button>
         <button
-          className="btn-primary btn-primary--md"
+          className="btn-primary btn-primary--md linkedin"
           onClick={() => handleShareClick(generateLinkedinShareURL(shareText))}
         >
-          <Linkedin /> Share
+          <Linkedin />
         </button>
         <button
-          className="btn-primary btn-primary--md"
+          className="btn-primary btn-primary--md facebook"
           onClick={() => handleShareClick(generateFacebookShareURL(shareText))}
         >
-          <Facebook /> Share
+          <Facebook />
         </button>
         <button
-          className="btn-primary btn-primary--md"
+          className="btn-primary btn-primary--md copy"
           onClick={handleCopyToClipboard}
         >
-          <Clipboard /> Copy
+          <Clipboard />
         </button>
       </div>
     </div>

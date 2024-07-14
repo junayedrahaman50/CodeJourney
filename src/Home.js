@@ -13,7 +13,7 @@ const Home = () => {
     data: posts,
     isPending,
     error,
-  } = useFetch("http://localhost:9000/posts");
+  } = useFetch("http://192.168.0.107:9000/posts");
   const [showModal, setShowModal] = useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
   const [visible, setVisible] = useState(false);

@@ -15,7 +15,7 @@ const Notes = () => {
     error,
     isPending,
     setData,
-  } = useFetch(`http://localhost:9000/posts/${id}`);
+  } = useFetch(`http://192.168.0.107:9000/posts/${id}`);
 
   const [newNoteTitle, setNewNoteTitle] = useState("");
   const [newNoteContent, setNewNoteContent] = useState("");
