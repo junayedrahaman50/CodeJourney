@@ -80,7 +80,7 @@ const Notes = () => {
     <div className="container">
       {post && (
         <div className="header mt-lg">
-          <h1 style={{ fontSize: "3rem" }} className="heading-primary">
+          <h1 className="heading-primary heading-primary--note ">
             {post.title}
           </h1>
           <button className="btn-primary mt-md" onClick={initNewNote}>

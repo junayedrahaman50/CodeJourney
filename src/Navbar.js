@@ -7,7 +7,9 @@ const Navbar = () => {
       <div className="container">
         <div className="logo">
           {/* <span>Code</span>Journey */}
-          <img style={{ width: "20rem" }} src={logo} alt="logo" />
+          <Link to="/">
+            <img style={{ width: "20rem" }} src={logo} alt="logo" />
+          </Link>
         </div>
         <ul>
           <Link className="link" to="/">
