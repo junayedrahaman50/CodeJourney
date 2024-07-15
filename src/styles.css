@@ -446,6 +446,62 @@ body {
   justify-content: center;
   gap: 0.8rem;
 }
+
+/* WaitList */
+.waitlist-container {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 3rem;
+}
+.waitlist-card {
+  background-color: #fefefe;
+  border: 1px solid #e1e1e1;
+  border-radius: 1rem;
+  padding: 2.4rem 2rem;
+}
+.waitlist-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.waitlist-title {
+  font-size: 3.6rem;
+}
+.waitlist-sub-text {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+.waitlist-email {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid #e1e1e1;
+  border-radius: 3px;
+  color: #333;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 400;
+  height: 5.6rem;
+  line-height: 1.5;
+  outline: none;
+  width: 35%;
+  padding: 1.2rem 2.4rem;
+}
+.btn-primary--waitlist {
+  font-size: 1.4rem;
+}
+.status-message {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.success-message {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
 /* Media Queries */
 @media only screen and (max-width: 31em) {
   html {

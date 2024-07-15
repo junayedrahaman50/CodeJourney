@@ -3,7 +3,7 @@ import Home from "./Home";
 import Navbar from "./Navbar";
 import "./styles.css";
 import Notes from "./Notes";
-import WaitList from "./WaitList";
+// import WaitList from "./WaitList";
 
 export default function App() {
   return (
@@ -12,9 +12,9 @@ export default function App() {
         <Navbar />
         <main className="main">
           <Routes>
-            <Route path="*" element={<WaitList />}></Route>
-            {/* <Route path="/" element={<Home />}></Route> */}
-            {/* <Route path="/notes/:id" element={<Notes />}></Route> */}
+            {/* <Route path="*" element={<WaitList />}></Route> */}
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/notes/:id" element={<Notes />}></Route>
           </Routes>
         </main>
       </BrowserRouter>

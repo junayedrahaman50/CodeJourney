@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Facebook, Linkedin, Twitter, Clipboard } from "lucide-react";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const SharePost = ({ selectedPost, closeModal }) => {
   if (!selectedPost) return null;
@@ -15,14 +15,14 @@ const SharePost = ({ selectedPost, closeModal }) => {
 
   const generateLinkedinShareURL = (text) => {
     return `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-      "https://yourwebsite.com"
+      "https://codejourney.vercel.app/"
     )}&summary=${encodeURIComponent(text)}`;
   };
 
   const generateFacebookShareURL = (text) => {
     return `https://www.facebook.com/sharer/sharer.php?quote=${encodeURIComponent(
       text
-    )}&u=${encodeURIComponent("https://yourwebsite.com")}`;
+    )}&u=${encodeURIComponent("https://codejourney.vercel.app/")}`;
   };
 
   const handleCopyToClipboard = () => {

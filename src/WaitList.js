@@ -5,12 +5,17 @@ const WaitList = () => {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("");
   const [submittedEmails, setSubmittedEmails] = useState([]);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     const storedEmails = JSON.parse(
       localStorage.getItem("submittedEmails") || "[]"
     );
     setSubmittedEmails(storedEmails);
+
+    const storedSubmissionStatus =
+      localStorage.getItem("isSubmitted") === "true";
+    setIsSubmitted(storedSubmissionStatus);
   }, []);
 
   const sendConfirmationEmail = (userEmail) => {
@@ -63,6 +68,10 @@ const WaitList = () => {
         JSON.stringify(newSubmittedEmails)
       );
 
+      // Set and store submission status
+      setIsSubmitted(true);
+      localStorage.setItem("isSubmitted", "true");
+
       setEmail("");
     } catch (error) {
       console.error("FAILED...", error);
@@ -71,78 +80,39 @@ const WaitList = () => {
   };
 
   return (
-    <div className="waitlist-signup">
-      <h2>Join Our Waitlist</h2>
-      <p>Be the first to know when we launch!</p>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email"
-          required
-        />
-        <button disabled={true} type="submit">
-          Sign Up
-        </button>
-      </form>
-      {status && <p className="status-message">{status}</p>}
-
-      <style>{`
-        .waitlist-signup {
-          font-family: Arial, sans-serif;
-          max-width: 400px;
-          margin: 0 auto;
-          padding: 20px;
-          text-align: center;
-          background-color: #f9f9f9;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-          color: #333;
-          margin-bottom: 10px;
-        }
-
-        p {
-          color: #666;
-          margin-bottom: 20px;
-        }
-
-        form {
-          display: flex;
-          flex-direction: column;
-        }
-
-        input[type="email"] {
-          padding: 10px;
-          margin-bottom: 10px;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-          font-size: 16px;
-        }
-
-        button {
-          padding: 10px;
-          background-color: #007bff;
-          color: white;
-          border: none;
-          border-radius: 4px;
-          font-size: 16px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-          background-color: #0056b3;
-        }
-
-        .status-message {
-          margin-top: 15px;
-          font-weight: bold;
-        }
-      `}</style>
+    <div className="waitlist-container mt-lg">
+      <div className="waitlist-card">
+        <h2 className="waitlist-title">Join our waitlist</h2>
+        {!isSubmitted ? (
+          <>
+            <p className="waitlist-sub-text">
+              Be the first to know when we launch!
+            </p>
+            <form className="waitlist-form" onSubmit={handleSubmit}>
+              <input
+                className="waitlist-email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                required
+              />
+              <button
+                className="btn-primary btn-primary--waitlist"
+                type="submit"
+              >
+                Sign Up
+              </button>
+            </form>
+          </>
+        ) : (
+          <p className="success-message">
+            Thank you for joining our waitlist! We'll keep you updated on our
+            launch.
+          </p>
+        )}
+        {status && <p className="status-message">{status}</p>}
+      </div>
     </div>
   );
 };
