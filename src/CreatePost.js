@@ -11,7 +11,7 @@ const CreatePost = ({ visible, setVisible }) => {
     const isAnyFieldEmpty = !title.trim() || !description.trim();
     if (!isAnyFieldEmpty) {
       e.preventDefault();
-      const post = { title, description };
+      const post = { title, description, notes: [] };
       setIsLoading(true);
 
       fetch("http://localhost:9000/posts", {

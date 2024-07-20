@@ -1,0 +1,85 @@
+{
+  "posts": [
+    {
+      "id": "A1B2",
+      "title": "Day 1: #100DaysOfCode Begins 🚀",
+      "description": "Starting my web dev journey with HTML, CSS & JS basics. Built a Cat Photo Website on FreeCodeCamp & a Cafe Menu. 8 hours/day for 100 days. Let's do this 💪!",
+      "notes": []
+    },
+    {
+      "id": "C3D4",
+      "title": "Day 2: #100DaysOfCode - JSX & Components 🚀",
+      "description": "Day 2 of #100DaysOfCode: Learning JSX syntax and building React components. Created a simple UI with buttons and forms. 📚💻",
+      "notes": []
+    },
+    {
+      "id": "E5F6",
+      "title": "Day 3: #100DaysOfCode - State & Props 💪",
+      "description": "Day 3 of #100DaysOfCode: Mastering state and props in React. Implemented stateful components and passed data using props. 📚💻",
+      "notes": []
+    },
+    {
+      "id": "G7H8",
+      "title": "Day 4: #100DaysOfCode - React Hooks 🎉",
+      "description": "Day 4 of #100DaysOfCode: Exploring React hooks. Learned how to use useState and useEffect to manage state and side effects. 📚💻",
+      "notes": []
+    },
+    {
+      "id": "I9J0",
+      "title": "Day 5: #100DaysOfCode - Handling Events 📝",
+      "description": "Day 5 of #100DaysOfCode: Working with event handling in React. Implemented event listeners and handled user interactions. 📚💻",
+      "notes": []
+    },
+    {
+      "id": "K1L2",
+      "title": "Day 6: #100DaysOfCode - Conditional Rendering 🤔",
+      "description": "Day 6 of #100DaysOfCode: Understanding conditional rendering in React. Used ternary operators and logical && to conditionally render components. 📚💻",
+      "notes": []
+    },
+    {
+      "id": "M3N4",
+      "title": "Day 7: #100DaysOfCode - Lists & Keys 🔄",
+      "description": "Day 7 of #100DaysOfCode: Mastering lists and keys in React. Learned how to render dynamic lists and manage keys for efficient updates. 📚💻",
+      "notes": []
+    },
+    {
+      "id": "O5P6",
+      "title": "Day 8: #100DaysOfCode - Forms & Controlled Components 📚",
+      "description": "Day 8 of #100DaysOfCode: Working with forms and controlled components in React. Managed form state and handled user inputs. 💻",
+      "notes": []
+    },
+    {
+      "id": "Q7R8",
+      "title": "Day 9: #100DaysOfCode - React Router 📈",
+      "description": "Day 9 of #100DaysOfCode: Exploring React Router for navigation. Set up routes and nested routes to create a multi-page application. 📚💻",
+      "notes": []
+    },
+    {
+      "id": "S9T0",
+      "title": "Day 10: #100DaysOfCode - Component Lifecycle 📁",
+      "description": "Day 10 of #100DaysOfCode: Learning about React component lifecycle methods. Implemented componentDidMount, componentDidUpdate, and componentWillUnmount. 📚💻",
+      "notes": [
+        {
+          "id": "A1B2",
+          "title": "Lifecycle Methods",
+          "content": "Explored React's component lifecycle methods like componentDidMount and componentDidUpdate."
+        },
+        {
+          "id": "C3D4",
+          "title": "State Management",
+          "content": "Practiced managing state using useState and useContext."
+        },
+        {
+          "id": "E5F6",
+          "title": "Context API",
+          "content": "Explored React's Context API for global state management."
+        },
+        {
+          "id": "G7H8",
+          "title": "Error Boundaries",
+          "content": "Learned how to use error boundaries to catch JavaScript errors in components."
+        }
+      ]
+    }
+  ]
+}
