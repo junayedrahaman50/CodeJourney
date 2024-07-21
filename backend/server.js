@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
+const postRoutes = require("./routes/posts");
 const app = express();
 
 // global middleware
@@ -10,9 +11,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
-  res.json({ msg: "Welcome to the app!" }); // send back a json string
-});
+// attach all routes specified in router to the app, on getting request to the specified path use the routes
+app.use("/api/posts", postRoutes);
 
 // attach all routes specified in router to the app, on getting request to the specified path use the routes
 // app.use("/api/posts", postRoutes);
