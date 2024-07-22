@@ -11,7 +11,7 @@ const DeleteNote = ({
       (note) => note.id !== selectedNote.id
     );
     console.log(filteredNotes);
-    fetch(`http://localhost:9000/posts/${post.id}`, {
+    fetch(`/api/posts/${post._id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

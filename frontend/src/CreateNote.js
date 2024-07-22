@@ -34,13 +34,13 @@ const CreateNote = ({
       };
       setIsLoading(true);
 
-      fetch(`http://localhost:9000/posts/${id}`, {
+      fetch(`/api/posts/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          notes: [...post.notes, newNote],
+          notes: [newNote, ...post.notes],
         }),
       })
         .then((response) => response.json())

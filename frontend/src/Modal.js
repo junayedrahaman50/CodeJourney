@@ -31,7 +31,7 @@ const Modal = ({
             </button>
             <Link
               style={{ textDecoration: "none" }}
-              to={`/notes/${selectedPost.id}`}
+              to={`/notes/${selectedPost._id}`}
               className="btn-primary btn-primary--md"
             >
               <Notebook /> Notes

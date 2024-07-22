@@ -19,7 +19,6 @@ const Home = () => {
   const [showPostDetails, setShowPostDetails] = useState(false);
 
   const handleClick = () => {
-    // window.open("https://x.com/junayed_rahaman", "_blank");
     setVisible(true);
   };
 
@@ -62,7 +61,10 @@ const Home = () => {
     fetch(`/api/posts/${selectedPost._id}`, {
       method: "DELETE",
     }).then(() => {
-      window.location.reload();
+      setData((prevData) =>
+        prevData.filter((post) => post._id !== selectedPost._id)
+      ); // Update the state to remove the deleted post
+      closeModal();
     });
   };
 
@@ -105,7 +107,6 @@ const Home = () => {
             className="overlay animate__animated animate__fadeIn"
           ></div>
         )}
-        {/* tomorrow make that following modal another component */}
         {showPostDetails && (
           <Modal
             selectedPost={selectedPost}
@@ -117,7 +118,11 @@ const Home = () => {
           />
         )}
         {showEdit && (
-          <EditPost selectedPost={selectedPost} closeModal={closeModal} />
+          <EditPost
+            selectedPost={selectedPost}
+            closeModal={closeModal}
+            setData={setData}
+          />
         )}
 
         {showShare && (
@@ -135,14 +140,7 @@ const Home = () => {
 
       <div className="container">
         <div className="header mt-lg">
-          <h1 className="heading-primary">
-            {/* Junayed's 100 Days of Code Journey */}
-            Track your coding progress
-          </h1>
-          {/* <button className="btn-primary mt-md" onClick={handleClick}>
-            Follow my journey on
-            <Twitter />
-          </button> */}
+          <h1 className="heading-primary">Track your coding progress</h1>
           <button className="btn-primary mt-md" onClick={handleClick}>
             <Plus />
             New post
@@ -156,7 +154,7 @@ const Home = () => {
               <div
                 onClick={() => handleModal(post)}
                 className="card mt-md"
-                key={post.id}
+                key={post._id}
               >
                 <h2
                   style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const EditPost = ({ selectedPost, closeModal }) => {
+const EditPost = ({ selectedPost, closeModal, setData }) => {
   const [postData, setPostData] = useState(selectedPost);
   const [isValid, setIsValid] = useState(true);
   const [titleCount, setTitleCount] = useState(postData.title.length);
@@ -14,17 +14,29 @@ const EditPost = ({ selectedPost, closeModal }) => {
     if (!isAnyFieldEmpty) {
       e.preventDefault();
 
-      fetch(`http://localhost:9000/posts/${postData.id}`, {
+      setIsLoading(true);
+
+      fetch(`/api/posts/${postData._id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(postData), // Send the updated taskData object
+        body: JSON.stringify(postData), // Send the updated postData object
       })
-        .then(() => {
+        .then((response) => response.json())
+        .then((updatedPost) => {
+          console.log("Updated Post:", updatedPost);
+          setData((prevData) => {
+            console.log("Previous Data:", prevData);
+            return prevData.map((post) =>
+              post._id === updatedPost._id ? updatedPost : post
+            );
+          });
           setIsLoading(false);
-          window.location.reload();
+          setIsValid(true);
+          closeModal(); // Close the modal after updating the state
         })
         .catch((error) => {
-          console.error("Error updating task:", error);
+          console.error("Error updating post:", error);
+          setIsLoading(false);
         });
     } else {
       setIsValid(false);
