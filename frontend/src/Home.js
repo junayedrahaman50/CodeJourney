@@ -9,11 +9,7 @@ import DeletePost from "./DeletePost";
 import Modal from "./Modal";
 
 const Home = () => {
-  const {
-    data: posts,
-    isPending,
-    error,
-  } = useFetch("http://192.168.0.107:9000/posts");
+  const { data: posts, isPending, error, setData } = useFetch("/api/posts");
   const [showModal, setShowModal] = useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
   const [visible, setVisible] = useState(false);
@@ -63,7 +59,7 @@ const Home = () => {
   };
 
   const handleDelete = () => {
-    fetch(`http://localhost:9000/posts/${selectedPost.id}`, {
+    fetch(`/api/posts/${selectedPost._id}`, {
       method: "DELETE",
     }).then(() => {
       window.location.reload();
@@ -156,30 +152,27 @@ const Home = () => {
           {error && <div className="error">{error}</div>}
           {isPending && <div className="loading">Loading...</div>}
           {posts &&
-            posts
-              .slice()
-              .reverse()
-              .map((post) => (
-                <div
-                  onClick={() => handleModal(post)}
-                  className="card mt-md"
-                  key={post.id}
+            posts.map((post) => (
+              <div
+                onClick={() => handleModal(post)}
+                className="card mt-md"
+                key={post.id}
+              >
+                <h2
+                  style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}
                 >
-                  <h2
-                    style={{ fontSize: "2rem", fontWeight: "var(--SEMI-BOLD)" }}
-                  >
-                    {post.title}
-                  </h2>
-                  <p style={{ fontSize: "var(--font-size-medium)" }}>
-                    {post.description.length > 100
-                      ? post.description.substring(0, 100) + "..."
-                      : renderContent(post.description)}
-                  </p>
-                </div>
-              ))}
+                  {post.title}
+                </h2>
+                <p style={{ fontSize: "var(--font-size-medium)" }}>
+                  {post.description.length > 100
+                    ? post.description.substring(0, 100) + "..."
+                    : renderContent(post.description)}
+                </p>
+              </div>
+            ))}
         </div>
       </div>
-      <CreatePost visible={visible} setVisible={setVisible} />
+      <CreatePost visible={visible} setVisible={setVisible} setData={setData} />
     </>
   );
 };

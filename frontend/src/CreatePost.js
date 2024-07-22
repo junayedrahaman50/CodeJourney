@@ -1,28 +1,37 @@
 import { useState } from "react";
 
-const CreatePost = ({ visible, setVisible }) => {
+const CreatePost = ({ visible, setVisible, setData }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [titleCount, setTitleCount] = useState(0);
   const [descriptionCount, setdescriptionCount] = useState(0);
   const [isValid, setIsValid] = useState(true);
+
   const handleSubmit = (e) => {
     const isAnyFieldEmpty = !title.trim() || !description.trim();
     if (!isAnyFieldEmpty) {
       e.preventDefault();
-      const post = { title, description, notes: [] };
+      const post = { title, description };
       setIsLoading(true);
 
-      fetch("http://localhost:9000/posts", {
+      fetch("/api/posts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(post),
-      }).then(() => {
-        setIsLoading(false);
-        console.log("new post added!");
-        window.location.reload();
-      });
+      })
+        .then((res) => res.json())
+        .then((newPost) => {
+          setIsLoading(false);
+          setData((prevData) => [newPost, ...prevData]);
+          setTitle("");
+          setDescription("");
+          setTitleCount(0);
+          setdescriptionCount(0);
+          setIsValid(true);
+          console.log("new post added!");
+          closeModal();
+        });
     } else {
       checkValid();
       return;
