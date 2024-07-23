@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Plus } from "lucide-react";
-import { useState, useEffect } from "react";
 import useFetch from "./useFetch";
 import CreatePost from "./CreatePost";
 import EditPost from "./EditPost";
@@ -8,7 +7,7 @@ import SharePost from "./SharePost";
 import DeletePost from "./DeletePost";
 import Modal from "./Modal";
 
-const Home = () => {
+const Home = ({ userProfile }) => {
   const { data: posts, isPending, error, setData } = useFetch("/api/posts");
   const [showModal, setShowModal] = useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
@@ -98,6 +97,11 @@ const Home = () => {
     ));
   };
 
+  // Filter posts by userId
+  const filteredPosts = posts?.filter(
+    (post) => post.userId === userProfile.userId
+  );
+
   return (
     <>
       <>
@@ -149,8 +153,8 @@ const Home = () => {
         <div className="content">
           {error && <div className="error">{error}</div>}
           {isPending && <div className="loading">Loading...</div>}
-          {posts &&
-            posts.map((post) => (
+          {filteredPosts &&
+            filteredPosts.map((post) => (
               <div
                 onClick={() => handleModal(post)}
                 className="card mt-md"
@@ -170,7 +174,12 @@ const Home = () => {
             ))}
         </div>
       </div>
-      <CreatePost visible={visible} setVisible={setVisible} setData={setData} />
+      <CreatePost
+        visible={visible}
+        setVisible={setVisible}
+        setData={setData}
+        userProfile={userProfile}
+      />
     </>
   );
 };

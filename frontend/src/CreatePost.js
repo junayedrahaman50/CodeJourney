@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CreatePost = ({ visible, setVisible, setData }) => {
+const CreatePost = ({ visible, setVisible, setData, userProfile }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -12,7 +12,12 @@ const CreatePost = ({ visible, setVisible, setData }) => {
     const isAnyFieldEmpty = !title.trim() || !description.trim();
     if (!isAnyFieldEmpty) {
       e.preventDefault();
-      const post = { title, description };
+      const post = {
+        title,
+        description,
+        username: userProfile.userName,
+        userId: userProfile.userId,
+      };
       setIsLoading(true);
 
       fetch("/api/posts", {

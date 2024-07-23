@@ -49,6 +49,7 @@ export default function App() {
         picture: decodedCredential.picture,
         userName: getUsername(decodedCredential.email),
         userId: decodedCredential.sub,
+        token: credential, // Store the token
       };
       setUserProfile(userInfo);
       console.log(userInfo);
@@ -64,9 +65,9 @@ export default function App() {
 
   const getUsername = (email) => {
     const userName = email.replace("@gmail.com", "");
-    if (userName.length > 10) {
-      return userName.slice(0, 10) + "..";
-    }
+    // if (userName.length > 10) {
+    //   return userName.slice(0, 10) + "..";
+    // }
     return userName;
   };
 
@@ -79,7 +80,10 @@ export default function App() {
             <main className="main">
               <Routes>
                 {/* <Route path="*" element={<WaitList />}></Route> */}
-                <Route path="/" element={<Home />}></Route>
+                <Route
+                  path="/"
+                  element={<Home userProfile={userProfile} />}
+                ></Route>
                 <Route path="/notes/:id" element={<Notes />}></Route>
               </Routes>
             </main>
