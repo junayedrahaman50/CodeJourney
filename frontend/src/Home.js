@@ -8,7 +8,12 @@ import DeletePost from "./DeletePost";
 import Modal from "./Modal";
 
 const Home = ({ userProfile }) => {
-  const { data: posts, isPending, error, setData } = useFetch("/api/posts");
+  const {
+    data: posts,
+    isPending,
+    error,
+    setData,
+  } = useFetch(`${process.env.REACT_APP_API_BASE_URL}/api/posts`);
   const [showModal, setShowModal] = useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
   const [visible, setVisible] = useState(false);
@@ -57,9 +62,12 @@ const Home = ({ userProfile }) => {
   };
 
   const handleDelete = () => {
-    fetch(`/api/posts/${selectedPost._id}`, {
-      method: "DELETE",
-    }).then(() => {
+    fetch(
+      `${process.env.REACT_APP_API_BASE_URL}/api/posts/${selectedPost._id}`,
+      {
+        method: "DELETE",
+      }
+    ).then(() => {
       setData((prevData) =>
         prevData.filter((post) => post._id !== selectedPost._id)
       ); // Update the state to remove the deleted post

@@ -1,8 +1,16 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const postRoutes = require("./routes/posts");
 const app = express();
+
+// Use CORS middleware
+app.use(
+  cors({
+    origin: "https://codejourney.vercel.app", // Replace with your frontend domain
+  })
+);
 
 // global middleware
 app.use(express.json());

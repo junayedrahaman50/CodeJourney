@@ -10,7 +10,7 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
-  <GoogleOAuthProvider clientId="926175553291-f1ooqt8ojtcrh1shqjqgv2pu7tos4bqt.apps.googleusercontent.com">
+  <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
     <StrictMode>
       <HelmetProvider>
         <App />

@@ -24,7 +24,7 @@ const EditNote = ({ selectedNote, closeModal, post, setData }) => {
       updatedNotes[noteIndex] = noteData;
 
       // Fetch request to update the post with the edited note
-      fetch(`/api/posts/${post._id}`, {
+      fetch(`${process.env.REACT_APP_API_BASE_URL}/api/posts/${post._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

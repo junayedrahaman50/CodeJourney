@@ -105,7 +105,7 @@ export default function App() {
               <GoogleLogin
                 onSuccess={handleLoginResponse}
                 onError={handleLoginResponse}
-                clientId="926175553291-f1ooqt8ojtcrh1shqjqgv2pu7tos4bqt.apps.googleusercontent.com"
+                clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
               />
             </div>
           </div>

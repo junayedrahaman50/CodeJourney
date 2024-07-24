@@ -20,7 +20,7 @@ const CreatePost = ({ visible, setVisible, setData, userProfile }) => {
       };
       setIsLoading(true);
 
-      fetch("/api/posts", {
+      fetch(`${process.env.REACT_APP_API_BASE_URL}/api/posts`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(post),

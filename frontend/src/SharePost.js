@@ -98,12 +98,14 @@ const SharePost = ({ selectedPost, closeModal }) => {
           <Twitter />
         </button>
         <button
+          disabled={true}
           className="btn-primary btn-primary--md linkedin"
           onClick={() => handleShareClick(generateLinkedinShareURL(shareText))}
         >
           <Linkedin />
         </button>
         <button
+          disabled={true}
           className="btn-primary btn-primary--md facebook"
           onClick={() => handleShareClick(generateFacebookShareURL(shareText))}
         >

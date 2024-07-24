@@ -15,7 +15,7 @@ const Notes = () => {
     error,
     isPending,
     setData,
-  } = useFetch(`/api/posts/${id}`);
+  } = useFetch(`${process.env.REACT_APP_API_BASE_URL}/api/posts/${id}`);
 
   const [newNoteTitle, setNewNoteTitle] = useState("");
   const [newNoteContent, setNewNoteContent] = useState("");

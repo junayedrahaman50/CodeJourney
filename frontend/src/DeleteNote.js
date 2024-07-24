@@ -11,7 +11,7 @@ const DeleteNote = ({
       (note) => note.id !== selectedNote.id
     );
     console.log(filteredNotes);
-    fetch(`/api/posts/${post._id}`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/api/posts/${post._id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

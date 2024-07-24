@@ -16,7 +16,7 @@ const EditPost = ({ selectedPost, closeModal, setData }) => {
 
       setIsLoading(true);
 
-      fetch(`/api/posts/${postData._id}`, {
+      fetch(`${process.env.REACT_APP_API_BASE_URL}/api/posts/${postData._id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(postData), // Send the updated postData object

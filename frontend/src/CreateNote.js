@@ -34,7 +34,7 @@ const CreateNote = ({
       };
       setIsLoading(true);
 
-      fetch(`/api/posts/${id}`, {
+      fetch(`${process.env.REACT_APP_API_BASE_URL}/api/posts/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
