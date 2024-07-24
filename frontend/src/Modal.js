@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { NotebookPen, Trash2, Notebook, Share2 } from "lucide-react";
+// use formatDistanceToNow fn date fns
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
 const Modal = ({
   closeModal,
   selectedPost,
@@ -18,6 +20,15 @@ const Modal = ({
           <h2 className="title">{selectedPost.title}</h2>
           <p className="description">
             {renderContent(selectedPost.description)}
+          </p>
+          <p
+            className="description"
+            style={{ fontSize: "1.4rem", fontWeight: 400, color: "dimgray" }}
+          >
+            <span style={{ fontWeight: 600, color: "#000" }}>Added: </span>
+            {formatDistanceToNow(new Date(selectedPost.createdAt), {
+              addSuffix: true,
+            })}
           </p>
           <div className="modal-buttons">
             <button onClick={initEdit} className="btn-primary btn-primary--md">
