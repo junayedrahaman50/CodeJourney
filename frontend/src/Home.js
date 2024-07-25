@@ -6,6 +6,7 @@ import EditPost from "./EditPost";
 import SharePost from "./SharePost";
 import DeletePost from "./DeletePost";
 import Modal from "./Modal";
+import WelcomeMessage from "./WelcomeMessage";
 
 const Home = ({ userProfile }) => {
   const {
@@ -21,6 +22,15 @@ const Home = ({ userProfile }) => {
   const [showShare, setShowShare] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
   const [showPostDetails, setShowPostDetails] = useState(false);
+  const [showWelcomeMsg, setShowWelcomeMsg] = useState(false);
+
+  useEffect(() => {
+    const hasVisitedBefore = localStorage.getItem("hasVisitedBefore");
+    if (!hasVisitedBefore) {
+      setShowWelcomeMsg(true);
+      localStorage.setItem("hasVisitedBefore", "true");
+    }
+  }, []);
 
   const handleClick = () => {
     setVisible(true);
@@ -39,6 +49,7 @@ const Home = ({ userProfile }) => {
     setShowDelete(false);
     setShowPostDetails(false);
     setSelectedPost(null);
+    setShowWelcomeMsg(false);
   };
 
   const initDelete = () => {
@@ -113,6 +124,7 @@ const Home = ({ userProfile }) => {
   return (
     <>
       <>
+        {showWelcomeMsg && <WelcomeMessage closeModal={closeModal} />}
         {showModal && (
           <div
             onClick={closeModal}
