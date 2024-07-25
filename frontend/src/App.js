@@ -93,7 +93,7 @@ export default function App() {
         <>
           <div className="modal animate__animated animate__fadeIn">
             <h2 style={textCenter} className="title">
-              Boost your productivity with CodeJourney!
+              Track your coding adventure with CodeJourney!
             </h2>
             <p
               style={{ textAlign: "center", marginBottom: 0 }}
