@@ -37,11 +37,10 @@ export default function App() {
 
   const handleLoginResponse = (response) => {
     if (response.error) {
-      console.log(response.error);
+      console.error(response.error);
     } else {
       const credential = response.credential;
       const decodedCredential = jwtDecode(credential);
-      console.log(decodedCredential);
       const userInfo = {
         email: decodedCredential.email,
         name: decodedCredential.name,
@@ -52,7 +51,6 @@ export default function App() {
         token: credential, // Store the token
       };
       setUserProfile(userInfo);
-      console.log(userInfo);
       setIsLoggedIn(true);
     }
   };

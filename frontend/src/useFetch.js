@@ -14,7 +14,6 @@ const useFetch = (url) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setData(data);
         // Setting isPending to false once we have the data, therefore updating the state
         setIsPending(false);
@@ -22,7 +21,7 @@ const useFetch = (url) => {
       })
       .catch((err) => {
         if (err.name === "AbortError") {
-          console.log("fetch aborted");
+          console.error("fetch aborted");
         } else {
           // set isPending message to false when having an error
           setIsPending(false);

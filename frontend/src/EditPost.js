@@ -23,9 +23,7 @@ const EditPost = ({ selectedPost, closeModal, setData }) => {
       })
         .then((response) => response.json())
         .then((updatedPost) => {
-          console.log("Updated Post:", updatedPost);
           setData((prevData) => {
-            console.log("Previous Data:", prevData);
             return prevData.map((post) =>
               post._id === updatedPost._id ? updatedPost : post
             );
